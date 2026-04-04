@@ -23,8 +23,7 @@ This is a high-performance Docker image for Terraria (TShock) servers, designed 
 
 <div align="center">
   <a href="https://hub.docker.com/r/finallf/terraria">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Docker Hub-finallf/terraria-blue?style=plastic&logo=docker">
-  </a>
+    <img alt="Static Badge" src="https://img.shields.io/badge/Docker Hub-finallf/terraria-blue?style=plastic&logo=docker"></a>
   &nbsp;
   <a href="https://hub.docker.com/r/finallf/terraria">
     <img alt="Docker Image Version" src="https://img.shields.io/docker/v/finallf/terraria?style=plastic">
