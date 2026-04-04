@@ -37,10 +37,6 @@ This is a high-performance Docker image for Terraria (TShock) servers, designed 
   <a href="https://github.com/finallf/terraria"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/finallf/terraria?style=plastic"></a>
   &nbsp;
   <a href="https://github.com/finallf/terraria"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/finallf/terraria"></a>
-  <br><p></p>
-  <a href="https://forum.reloaded.com.br"><img alt="Static Badge" src="https://img.shields.io/badge/Forum-ReloadeD-blue?style=plastic"></a>
-  &nbsp;
-  <a href="https://discord.gg/HxmqAEkY"><img alt="Static Badge" src="https://img.shields.io/badge/Made by-Finallf-purple?style=plastic&logo=discord"></a>
 </div>
 
 ---
@@ -269,13 +265,17 @@ The following tools were used in the construction of the project:
 
 
 <div align="center">
-      <a href="https://reloaded.com.br">
-        <kbd><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></kbd><br>
-      </a>
-      <a href="mailto:finallf@gmail.com">
-        <img alt="Gmail" src="https://img.shields.io/badge/-finallf@gmail.com-c14438?style=plastic&logo=gmail&logoColor=white"><br>
-      </a>
-        <img alt="Twitter" src="https://img.shields.io/badge/@ReloadeDtec-blue?style=plastic&logo=X"><br>
+	<a href="https://reloaded.com.br">
+		<kbd><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></kbd>
+	</a>
+	<p></p>
+	<a href="mailto:finallf@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/-finallf@gmail.com-c14438?style=plastic&logo=gmail&logoColor=white"></a>
+	&nbsp;
+	<a href="https://x.com/ReloadeDtec"><img alt="Twitter" src="https://img.shields.io/badge/@ReloadeDtec-blue?style=plastic&logo=X"></a>
+	&nbsp;
+	<a href="https://forum.reloaded.com.br"><img alt="Static Badge" src="https://img.shields.io/badge/Forum-ReloadeD-blue?style=plastic&logo=phpbb"></a>
+	&nbsp;
+	<a href="https://discord.gg/HxmqAEkY"><img alt="Static Badge" src="https://img.shields.io/badge/Discord-Finallf-purple?style=plastic&logo=discord"></a>
 </div>
 
 
