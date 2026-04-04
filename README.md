@@ -76,6 +76,8 @@ The following tools were used in the construction of the project:
 <a href="https://dev.w3.org/html5/spec-LC"><img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/></a>
 <a href="https://www.w3.org/Style/CSS"><img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/></a>
 
+<br>
+
 ---
 
 > [!WARNING]
