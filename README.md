@@ -272,7 +272,7 @@ $ php
 ---
 ## 📝 Licença
 
-Este projeto esta sobe a licença [GPL-3.0 license](?tab=GPL-3.0-1-ov-file).
+Este projeto esta sobe a licença [GPL-3.0 license](?tab=GPL-3.0-1-ov-file#).
 
 Feito com ❤️ por Regis Vieira Delgado.
 
