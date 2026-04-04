@@ -5,13 +5,15 @@
 </h4>
 
 <p align="center">
- <a href="## 💻 About the project">About</a> •
- <a href="#%EF%B8%8F-Features">Features</a> •
+ <a href="#-about-the-project">About</a> •
+ <a href="#%EF%B8%8F-features">Features</a> •
  <a href="## ⚙️ Features">Features</a> •
- <a href="#-Technologies">Technologies</a> • 
- <a href="#warning-Minimum-Requirements">Minimum Requirements</a> • 
- <a href="#large_blue_circle-instalação-no-windows">Instalação no Windows</a> • 
- <a href="#-contribuidores">Contribuidores</a> • 
+ <a href="#-technologies-">Technologies</a> • 
+ <a href="#-why-use-this-image">Why use this image</a> • 
+ <a href="#%EF%B8%8F-variáveis-de-ambiente-environment-variables">Environment Variables</a> • 
+ <a href="#-instalação-no-windows">Instalação no Windows</a> • 
+ <a href="#-rodando-o-backend-servidor">Rodando o Backend (servidor)</a> •
+ <a href="#%E2%80%8D-contributors">Contributors</a> •
  <a href="#-autor">Autor</a> •
  <a href="#user-content--licença">Licença</a>
 </p>
@@ -273,9 +275,6 @@ $ php
 ## 📝 Licença
 
 Este projeto esta sobe a licença ([GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file)).
-
-<a href="https://github.com/Finallf/terraria#">GPL-3.0 license</a> •
-
 
 Feito com ❤️ por Regis Vieira Delgado.
 
