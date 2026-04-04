@@ -68,13 +68,13 @@ This is a high-performance Docker image for Terraria (TShock) servers, designed 
 
 The following tools were used in the construction of the project:
 
-<a href="https://hub.docker.com/r/finallf/terraria"><img alt="Docker" src="https://img.shields.io/badge/Docker-blue?&style=for-the-badge&logo=docker&logoColor=white"></a>
-<a href="https://hub.docker.com/r/finallf/terraria"><img alt="Bash" src="https://img.shields.io/badge/Bash-gray?&style=for-the-badge&logo=GNUbash&logoColor=white"></a>
-<a href="https://hub.docker.com/r/finallf/terraria"><img alt="TShock" src="https://img.shields.io/badge/TShock-%23777BB4?&style=for-the-badge"></a>
-<a href="https://hub.docker.com/r/finallf/terraria"><img alt="Debian" src="https://img.shields.io/badge/Debian-white?&style=for-the-badge&logo=Debian&logoColor=red"/></a>
-<a href="https://hub.docker.com/r/finallf/terraria"><img alt="Terraria" src="https://img.shields.io/badge/Terraria-blue?&style=for-the-badge&logo=Terraria&logoColor=white"/></a>
-<a href="https://hub.docker.com/r/finallf/terraria"><img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/></a>
-<a href="https://hub.docker.com/r/finallf/terraria"><img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/></a>
+<a href="https://www.docker.com"><img alt="Docker" src="https://img.shields.io/badge/Docker-blue?&style=for-the-badge&logo=docker&logoColor=white"></a>
+<a href="https://www.gnu.org/software/bash"><img alt="Bash" src="https://img.shields.io/badge/Bash-gray?&style=for-the-badge&logo=GNUbash&logoColor=white"></a>
+<a href="https://github.com/Pryaxis/TShock"><img alt="TShock" src="https://img.shields.io/badge/TShock-%23777BB4?&style=for-the-badge"></a>
+<a href="https://www.debian.org/"><img alt="Debian" src="https://img.shields.io/badge/Debian-white?&style=for-the-badge&logo=Debian&logoColor=red"/></a>
+<a href="https://terraria.org"><img alt="Terraria" src="https://img.shields.io/badge/Terraria-blue?&style=for-the-badge&logo=Terraria&logoColor=white"/></a>
+<a href="https://dev.w3.org/html5/spec-LC"><img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/></a>
+<a href="https://www.w3.org/Style/CSS"><img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/></a>
 
 ---
 
