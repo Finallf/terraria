@@ -234,6 +234,19 @@ The following tools were used in the construction of the project:
 ## 👨‍💻 Collaborators
 
 <!-- readme: collaborators,contributors -start -->
+<table>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/Finallf">
+                    <img src="https://avatars.githubusercontent.com/u/8967685?v=4" width="100;" alt="Finallf"/>
+                    <br />
+                    <sub><b>Regis Vieira Delgado</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
+</table>
 <!-- readme: collaborators,contributors -end -->
 
 
