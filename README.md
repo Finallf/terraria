@@ -266,19 +266,19 @@ The following tools were used in the construction of the project:
 ---
 ## 🦸 Author
 
-<table>
-  <tr>
-    <td align="center">
+
+
+<div align="center">
       <a href="https://reloaded.com.br">
-        <img alt="Finallf" style="border-radius: 50%;" width="100px;" src="https://avatars.githubusercontent.com/u/8967685"><br>
+        <kbd><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></kbd><br>
       </a>
       <a href="mailto:finallf@gmail.com">
         <img alt="Gmail" src="https://img.shields.io/badge/-finallf@gmail.com-c14438?style=plastic&logo=gmail&logoColor=white"><br>
       </a>
         <img alt="Twitter" src="https://img.shields.io/badge/@ReloadeDtec-blue?style=plastic&logo=X"><br>
-    </td>
-  </tr>
-</table>
+</div>
+
+
 
 
 ---
