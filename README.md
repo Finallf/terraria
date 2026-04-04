@@ -78,7 +78,8 @@ The following tools were used in the construction of the project:
 
 ---
 
-## :warning: Minimum Requirements
+> [!WARNING]
+> Minimum Requirements
 
 ✔️ Working Docker installation
 
@@ -86,7 +87,7 @@ The following tools were used in the construction of the project:
 
 ---
 
-## ❓ Why use this image❓
+## Why use this image❓
  
  - If you manage servers in any professional Docker environment, you know that visibility is everything.
 
