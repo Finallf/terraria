@@ -272,7 +272,7 @@ $ php
 ---
 ## 📝 Licença
 
-Este projeto esta sobe a licença [GPL-3.0 license](?tab=GPL-3.0-1-ov-file#).
+Este projeto esta sobe a licença ([GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file)).
 
 <a href="https://github.com/Finallf/terraria#">GPL-3.0 license</a> •
 
