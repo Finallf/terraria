@@ -101,7 +101,7 @@ The following tools were used in the construction of the project:
 You can configure the server behavior using the variables below in your docker-compose.yml file or via the -e flag in docker run:
 
 | Variable | Description | Default |
-|:---------|:-----------:|--------:|
+|:---------|:-----------:|:-------:|
 | SERVER_PASSWORD | The server password required to join the server. | (Empty) |
 | MAX_SLOTS | Maximum number of clients connected at once. | 8 |
 | REST_API_ENABLED | If true, activate the REST API. | false |
