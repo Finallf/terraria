@@ -30,8 +30,8 @@ This is a high-performance Docker image for Terraria (TShock) servers, designed 
   &nbsp;
   <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/finallf/terraria?style=plastic"></a>
   &nbsp;
-  <a href="https://github.com/finallf/terraria">
-    <img alt="Static Badge" src="https://img.shields.io/badge/GitHub-finallf/terraria-blue?style=plastic&logo=github">&nbsp;
+  <a href="https://github.com/finallf/terraria"><img alt="Static Badge" src="https://img.shields.io/badge/GitHub-finallf/terraria-blue?style=plastic&logo=github"></a>
+  &nbsp;
     <img alt="GitHub License" src="https://img.shields.io/github/license/finallf/terraria?style=plastic">&nbsp;
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/finallf/terraria?style=plastic">&nbsp;
   </a>
