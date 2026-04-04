@@ -7,7 +7,6 @@
 <p align="center">
  <a href="#-about-the-project">About</a> •
  <a href="#%EF%B8%8F-features">Features</a> •
- <a href="## ⚙️ Features">Features</a> •
  <a href="#-technologies-">Technologies</a> • 
  <a href="#-why-use-this-image">Why use this image</a> • 
  <a href="#%EF%B8%8F-variáveis-de-ambiente-environment-variables">Environment Variables</a> • 
