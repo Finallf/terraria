@@ -212,6 +212,18 @@ $ php
 <br>
 
 ---
+## 💪 How to contribute to the project
+
+1. Fork the project.
+2. Create a new branch with your changes: `git checkout -b my-feature`
+3. Save the changes and create a commit message describing what you did: `git commit -m "feature: My new feature"`
+4. Send your changes: `git push origin my-feature`
+> [!TIP]
+> If you have any questions, check out this guide on how to contribute on GitHub: [📖](https://github.com/Finallf/terraria?tab=contributing-ov-file)
+
+<br>
+
+---
 ## 🛠 Technologies
 
 The following tools were used in the construction of the project:
@@ -227,7 +239,7 @@ The following tools were used in the construction of the project:
 <br>
 
 ---
-## 👨‍💻 Collaborators
+## 👨‍💻 Collaborators:
 💜 Thank you to everyone who contributed to improving the project :)
 
 <!-- readme: collaborators,contributors -start -->
@@ -249,21 +261,7 @@ The following tools were used in the construction of the project:
 <br>
 
 ---
-## 💪 How to contribute to the project
-
-1. Fork the project.
-2. Create a new branch with your changes: `git checkout -b my-feature`
-3. Save the changes and create a commit message describing what you did: `git commit -m "feature: My new feature"`
-4. Send your changes: `git push origin my-feature`
-> If you have any questions, check out this guide on how to contribute on GitHub: [📖](https://github.com/Finallf/terraria?tab=contributing-ov-file)
-
-<br>
-
----
-## 🦸 Author
-
-
-
+## 🦸 Author:
 <div align="center">
 	<a href="https://reloaded.com.br">
 		<kbd><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></kbd>
@@ -278,10 +276,9 @@ The following tools were used in the construction of the project:
 	<a href="https://discord.gg/HxmqAEkY"><img alt="Static Badge" src="https://img.shields.io/badge/Discord-Finallf-purple?style=plastic&logo=discord"></a>
 </div>
 
-
-
+<br>
 
 ---
-## 📝 Licença
+## 📝 License:
 
 This project is licensed under: ([GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file)).
