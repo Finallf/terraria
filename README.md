@@ -240,9 +240,10 @@ The following tools were used in the construction of the project:
 
 ---
 ## 👨‍💻 Collaborators:
-
 💜 Thank you to everyone who contributed to improving the project :)
 
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
 
 <br>
 
