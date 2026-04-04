@@ -284,8 +284,4 @@ The following tools were used in the construction of the project:
 ---
 ## 📝 Licença
 
-Este projeto esta sobe a licença ([GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file)).
-
-Feito com ❤️ por Regis Vieira Delgado.
-
-👋🏽 [Entre em contato!](https://reloaded.com.br)
+This project is licensed under: ([GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file)).
