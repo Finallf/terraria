@@ -22,17 +22,14 @@
 This is a high-performance Docker image for Terraria (TShock) servers, designed with a focus on automation, data security, and detailed monitoring. This image utilizes a robust architecture, ensuring that every server event is accurately logged and that configurations are precisely set.
 
 <div align="center">
-  <a href="https://hub.docker.com/r/finallf/terraria">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Docker Hub-finallf/terraria-blue?style=plastic&logo=docker">
-  </a>
+  <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Static Badge" src="https://img.shields.io/badge/Docker Hub-finallf/terraria-blue?style=plastic&logo=docker"></a>
   &nbsp;
-  <a href="https://hub.docker.com/r/finallf/terraria">
-    <img alt="Docker Image Version" src="https://img.shields.io/docker/v/finallf/terraria?style=plastic"></a>&nbsp;
-    <img alt="Docker Image Size (tag)" src="https://img.shields.io/docker/image-size/finallf/terraria/v3.1?style=plastic">
-      &nbsp;
-    <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/finallf/terraria?style=plastic">
-      &nbsp;
-  </a>
+  <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Docker Image Version" src="https://img.shields.io/docker/v/finallf/terraria?style=plastic"></a>
+  &nbsp;
+  <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Docker Image Size (tag)" src="https://img.shields.io/docker/image-size/finallf/terraria/v3.1?style=plastic"></a>
+  &nbsp;
+  <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/finallf/terraria?style=plastic"></a>
+  &nbsp;
   <a href="https://github.com/finallf/terraria">
     <img alt="Static Badge" src="https://img.shields.io/badge/GitHub-finallf/terraria-blue?style=plastic&logo=github">&nbsp;
     <img alt="GitHub License" src="https://img.shields.io/github/license/finallf/terraria?style=plastic">&nbsp;
