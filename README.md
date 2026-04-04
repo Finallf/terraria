@@ -89,7 +89,7 @@ You can configure the server behavior using the variables below in your docker-c
 | LOG_REST | If true, enables logging of REST API connections. | false |
 | DISABLE_UUID_LOGIN | If true, prevents users from logging in with the client's UUID. | false |
 | SSC_ENABLED | If true, enables server-side character, causing client data to be saved on the server instead of the client. | false |
-| SERVER_SIDE_CHARACTER_SAVE | How often SSC should save, in minutes. | 5 |
+| SSC_SAVE | How often SSC should save, in minutes. | 5 |
 | KEEP_PLAYER_APPEARANCE | If true, it allows players to retain the local appearance of their characters in SSC. | false |
 | STARTINGINVENTORY | If true, adds some items to the Inventory for new players when SSC is enabled. Click here for more information. | (Empty) |
 | WORLD_NAME | Give your World a friendly name. | (Empty)?????????? |
