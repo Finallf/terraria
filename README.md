@@ -3,16 +3,16 @@
 </h4>
 
 <p align="center">
- <a href="#-about-the-project">About</a> •
- <a href="#%EF%B8%8F-features">Features</a> •
- <a href="#-technologies-">Technologies</a> • 
- <a href="#-why-use-this-image">Why use this image</a> • 
- <a href="#%EF%B8%8F-variáveis-de-ambiente-environment-variables">Environment Variables</a> • 
- <a href="#-instalação-no-windows">Instalação no Windows</a> • 
- <a href="#-rodando-o-backend-servidor">Rodando o Backend (servidor)</a> •
- <a href="#%E2%80%8D-contributors">Contributors</a> •
- <a href="#-autor">Autor</a> •
- <a href="#user-content--licença">Licença</a>
+	<a href="#-about-the-project">About</a> •
+	<a href="#%EF%B8%8F-features">Features</a> •
+	<a href="#why-use-this-image">Why use this image</a> • 
+	<a href="#-technologies-">Technologies</a> • 
+	<a href="#%EF%B8%8F-variáveis-de-ambiente-environment-variables">Environment Variables</a> • 
+	<a href="#-instalação-no-windows">Instalação no Windows</a> • 
+	<a href="#-rodando-o-backend-servidor">Rodando o Backend (servidor)</a> •
+	<a href="#%E2%80%8D-contributors">Contributors</a> •
+	<a href="#-autor">Autor</a> •
+	<a href="#user-content--licença">Licença</a>
 </p>
 
 ---
