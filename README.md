@@ -231,21 +231,22 @@ The following tools were used in the construction of the project:
 <br>
 
 ---
-## 👨‍💻 Contributors
+## 👨‍💻 Collaborators
+
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
+
+
 
 💜 Thank you to everyone who contributed to improving the project :)
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/finallf">
-        <img style="border-radius: 15px;" src="https://avatars.githubusercontent.com/u/8967685" width="100px;" alt=""/><br />
-          <sub><b>Regis Vieira Delgado</b></sub>
-      </a><br />
-      <a href="https://github.com/finallf" title="Regis Vieira Delgado"></a>
-    </td>
-  </tr>
-</table>
+  <a align="center" href="https://github.com/finallf">
+    <kbd><img alt="" width="100px;" src="https://avatars.githubusercontent.com/u/8967685"></kbd>
+    <div>Regis Vieira Delgado</div>
+  </a>
+
+
+
 
 ## 💪 Como contribuir para o projeto
 
