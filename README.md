@@ -7,6 +7,7 @@
 <p align="center">
  <a href="## 💻 About the project">About</a> •
  <a href="#%EF%B8%8F-Features">Features</a> •
+ <a href="## ⚙️ Features">Features</a> •
  <a href="#-Technologies">Technologies</a> • 
  <a href="#warning-Minimum-Requirements">Minimum Requirements</a> • 
  <a href="#large_blue_circle-instalação-no-windows">Instalação no Windows</a> • 
@@ -271,7 +272,7 @@ $ php
 ---
 ## 📝 Licença
 
-Este projeto esta sobe a licença [GPL-3.0 license](./LICENSE).
+Este projeto esta sobe a licença [GPL-3.0 license](?tab=GPL-3.0-1-ov-file).
 
 Feito com ❤️ por Regis Vieira Delgado.
 
