@@ -46,19 +46,19 @@ This is a high-performance Docker image for Terraria (TShock) servers, designed 
 ---
 ## ⚙️ Features
 ### Internal Architecture (Without Supervisor):
- - [x] Native and lightweight execution, optimized for high-performance Linux and container environments, completely rootless.
+ - ✅ Native and lightweight execution, optimized for high-performance Linux and container environments, completely rootless.
 
 ### Robust Logging System:
- - [x] Full log capture (STDOUT/STDERR) with highly accurate timestamps, allowing for complete auditing from boot to shutdown.
+ - ✅ Full log capture (STDOUT/STDERR) with highly accurate timestamps, allowing for complete auditing from boot to shutdown.
 
 ### Configuration Management:
- - [x] It uses jq for manipulating JSON files, ensuring that your settings (such as the initial inventory) can be changed without risk of file corruption.
+ - ✅ It uses jq for manipulating JSON files, ensuring that your settings (such as the initial inventory) can be changed without risk of file corruption.
 
 ### Interactivity via Named Pipe:
- - [x] It allows commands to be sent to the server console externally and securely, facilitating integration with scripts and web interfaces.
+ - ✅ It allows commands to be sent to the server console externally and securely, facilitating integration with scripts and web interfaces.
 
 ### Graceful Shutdown:
- - [x] A signal capture system (SIGTERM) that ensures the server saves the world's progress before being terminated by Docker.
+ - ✅ A signal capture system (SIGTERM) that ensures the server saves the world's progress before being terminated by Docker.
 
 <br>
 
@@ -80,7 +80,7 @@ The following tools were used in the construction of the project:
 
 > [!NOTE] Minimum Requirements
 
-✔️ Instalação do Docker
+✔️ Working Docker installation
 
 <br>
 
