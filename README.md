@@ -78,7 +78,7 @@ The following tools were used in the construction of the project:
 
 ---
 
-> [!NOTE] Minimum Requirements
+## :warning: Minimum Requirements
 
 ✔️ Working Docker installation
 
