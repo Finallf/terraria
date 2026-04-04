@@ -37,7 +37,7 @@ This is a high-performance Docker image for Terraria (TShock) servers, designed 
   <a href="https://github.com/finallf/terraria"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/finallf/terraria?style=plastic"></a>
   &nbsp;
   <a href="https://github.com/finallf/terraria"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/finallf/terraria"></a>
-  &nbsp;
+  <br>
   <a href="https://discord.gg/HxmqAEkY"><img alt="Static Badge" src="https://img.shields.io/badge/Made by-Finallf-purple?style=plastic&logo=discord"></a>
   &nbsp;
   <a href="https://forum.reloaded.com.br"><img alt="Static Badge" src="https://img.shields.io/badge/Forum-ReloadeD-blue?style=plastic"></a>
