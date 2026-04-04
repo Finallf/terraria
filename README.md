@@ -100,31 +100,28 @@ The following tools were used in the construction of the project:
 
 You can configure the server behavior using the variables below in your docker-compose.yml file or via the -e flag in docker run:
 
-| Variable | Description | Options | Default |
-|:---------|:-----------:|:-------:|--------:|
-| SERVER_PASSWORD | The server password required to join the server. | 000 | (Empty) |
-| MAX_SLOTS | Maximum number of clients connected at once. | 000 | 8 |
-| REST_API_ENABLED | Enable or disable the REST API. | 000 | false |
-| LOG_REST | Whether or not to log REST API connections. | 000 | false |
-| DISABLE_UUID_LOGIN | Prevents users from being able to login with their client UUID. | 000 | false |
-| SSC_ENABLED | Enable server side characters, causing client data to be saved on the server instead of the client. | 000 | false |
-| SERVER_SIDE_CHARACTER_SAVE | How often SSC should save, in minutes. | 000 | 5 |
-| KEEP_PLAYER_APPEARANCE | If players should keep their local character appearance in SSC. | 000 | false |
-| STARTINGINVENTORY | The starting default inventory for new players when SSC is enabled. Click Here for more info. | 000 | (Empty) |
-| WORLD_NAME | Give your World a friendly name. | 000 | (Empty)?????????? |
-| WORLD_FILE | Specifies a name for the world file. | 000 | terraria_world.wld |
-| AUTO_CREATE | 1: Small, 2: Medium, 3: Large - create the world file with a given size. | 000 | 1 |
-| DIFFICULTY | Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey). This only affects new worlds. | 000 | 0???????????? |
-| WORLD_EVIL | Sets the world's evil state (random, corrupt, or crimson). | 000 | random????????? |
-| SEED | Specifies the world seed when using -autocreate. | 000 | random |
-| FORCE_UPDATE | Forces the server not to hibernate when there are no players. | 000 | false |
-| MOTD | Sets the Message of the Day. | 000 | (Empty) |
-| SECURE | Turns on the base game's "antispam" feature. | 000 | false |
-| LANG | Sets the server language (en-US, de-DE, it-IT, fr-FR, es-ES, ru-RU, zh-Hans, pt-BR, pl-PL). | 000 | (Empty) |
-| TZ | Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones | 000 | UTC |
-
-
-
+| Variable | Description | Default |
+|:---------|:-----------:|--------:|
+| SERVER_PASSWORD | The server password required to join the server. | (Empty) |
+| MAX_SLOTS | Maximum number of clients connected at once. | 8 |
+| REST_API_ENABLED | If true, activate the REST API. | false |
+| LOG_REST | If true, enables logging of REST API connections. | false |
+| DISABLE_UUID_LOGIN | If true, prevents users from logging in with the client's UUID. | false |
+| SSC_ENABLED | If true, enables server-side character, causing client data to be saved on the server instead of the client. | false |
+| SERVER_SIDE_CHARACTER_SAVE | How often SSC should save, in minutes. | 5 |
+| KEEP_PLAYER_APPEARANCE | If true, it allows players to retain the local appearance of their characters in SSC. | false |
+| STARTINGINVENTORY | If true, adds some items to the Inventory for new players when SSC is enabled. Click here for more information. | (Empty) |
+| WORLD_NAME | Give your World a friendly name. | (Empty)?????????? |
+| WORLD_FILE | Specifies a name for the world file. | terraria_world.wld |
+| AUTO_CREATE | Creates the world file with the specified size (1: Small, 2: Medium, 3: Large). | 1 |
+| DIFFICULTY | Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey). This only affects new worlds. | 0???????????? |
+| WORLD_EVIL | Sets the world's evil state (random, corrupt, or crimson). | random????????? |
+| SEED | Specifies the world seed when using -autocreate. | random |
+| FORCE_UPDATE | If true, prevents the server from entering hibernation mode when there are no players. | false |
+| MOTD | Sets the Message of the Day. | (Empty) |
+| SECURE | If true, activates the base game's "antispam" feature. | false |
+| LANG | Sets the server language (en-US, de-DE, it-IT, fr-FR, es-ES, ru-RU, zh-Hans, pt-BR, pl-PL). | (Empty) |
+| TZ | Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones | UTC |
 
 
 
