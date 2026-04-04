@@ -232,6 +232,7 @@ The following tools were used in the construction of the project:
 
 ---
 ## 👨‍💻 Collaborators
+💜 Thank you to everyone who contributed to improving the project :)
 
 <!-- readme: collaborators,contributors -start -->
 <table>
@@ -249,18 +250,9 @@ The following tools were used in the construction of the project:
 </table>
 <!-- readme: collaborators,contributors -end -->
 
+<br>
 
-
-💜 Thank you to everyone who contributed to improving the project :)
-
-  <a align="center" href="https://github.com/finallf">
-    <kbd><img alt="" width="100px;" src="https://avatars.githubusercontent.com/u/8967685"></kbd>
-    <div>Regis Vieira Delgado</div>
-  </a>
-
-
-
-
+---
 ## 💪 Como contribuir para o projeto
 
 1. Faça um **fork** do projeto.
@@ -269,8 +261,9 @@ The following tools were used in the construction of the project:
 4. Envie as suas alterações: `git push origin my-feature`
 > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
 
----
+<br>
 
+---
 ## 🦸 Author
 
 <table>
