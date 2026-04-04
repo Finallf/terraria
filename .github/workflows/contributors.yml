@@ -19,3 +19,4 @@ jobs:
                 image_size: 80
                 use_username: true
                 collaborators: all
+                AVATAR_SHAPE: round
