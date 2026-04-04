@@ -64,7 +64,16 @@ This is a high-performance Docker image for Terraria (TShock) servers, designed 
 
 ---
 
-## 🛠 Technologies 🛠
+## Why use this image❓
+ 
+ - If you manage servers in any professional Docker environment, you know that visibility is everything.
+
+ - This image was built for administrators who need reliable logs and dynamic configurations via environment variables, without sacrificing the simplicity of docker-compose.
+
+<br>
+
+---
+## 🛠 Technologies
 
 The following tools were used in the construction of the project:
 
@@ -89,13 +98,6 @@ The following tools were used in the construction of the project:
 
 ---
 
-## Why use this image❓
- 
- - If you manage servers in any professional Docker environment, you know that visibility is everything.
-
- - This image was built for administrators who need reliable logs and dynamic configurations via environment variables, without sacrificing the simplicity of docker-compose.
-
-<br>
 
 ---
 
