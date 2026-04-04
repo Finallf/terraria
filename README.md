@@ -42,7 +42,6 @@ This is a high-performance Docker image for Terraria (TShock) servers, designed 
   &nbsp;
   <a href="https://discord.gg/HxmqAEkY"><img alt="Static Badge" src="https://img.shields.io/badge/Made by-Finallf-purple?style=plastic&logo=discord"></a>
 </div>
-<br>
 
 ---
 ## ⚙️ Features
