@@ -1,7 +1,5 @@
 <h4 align="center">
-  <img alt="TShock Logo" style="width: 25%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png">&emsp;
-  <img alt="Terraria Logo" style="width: 30%" src="https://static.wikia.nocookie.net/terraria_gamepedia/images/a/a4/NewPromoLogo.png">&emsp;
-  <img alt="TShock Logo" style="width: 30%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png">
+  <img alt="Terraria Logo" src="https://static.wikia.nocookie.net/terraria_gamepedia/images/a/a4/NewPromoLogo.png">&emsp;
 </h4>
 
 <p align="center">
@@ -19,7 +17,7 @@
 
 ---
 ## 💻 About the project
-This is a high-performance Docker image for Terraria (TShock) servers, designed with a focus on automation, data security, and detailed monitoring. This image utilizes a robust architecture, ensuring that every server event is accurately logged and that configurations are precisely set.
+This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png"> image for Terraria <img alt="TShock Logo" style="width: 5%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png"> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
 
 <div align="center">
   <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Static Badge" src="https://img.shields.io/badge/Docker Hub-finallf/terraria-blue?style=plastic&logo=docker"></a>
@@ -281,4 +279,4 @@ The following tools were used in the construction of the project:
 ---
 ## 📝 License:
 
-This project is licensed under: ([GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file)).
+This project is licensed under: [GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file).
