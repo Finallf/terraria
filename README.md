@@ -96,25 +96,32 @@ The following tools were used in the construction of the project:
 
 ---
 
-### ⚙️ Variáveis de Ambiente (Environment Variables)
+### ⚙️ Environment Variables
 
-Você pode configurar o comportamento do servidor utilizando as variáveis abaixo no seu docker-compose.yml ou via flag -e no docker run.
+You can configure the server behavior using the variables below in your docker-compose.yml file or via the -e flag in docker run:
 
-Configurações Principais:
-
-| Variável | Descrição | Valor Padrão |
+| Variable | Description | Default |
 |:---------|:---------:|-------------:|
-| WORLD_NAME | Nome do arquivo do mundo (.wld) a ser carregado ou criado. | TerrariaWorld |
-| SERVER_PASS | Define a senha de entrada para os jogadores no servidor. | (Vazio) |
-| MAX_PLAYERS | Limite máximo de jogadores simultâneos no servidor. | 16 |
-
-
-
-
-
-
-
-
+| SERVER_PASSWORD | The server password required to join the server. | (Empty) |
+| MAX_SLOTS | Maximum number of clients connected at once. | 8 |
+| REST_API_ENABLED | Enable or disable the REST API. | false |
+| LOG_REST | Whether or not to log REST API connections. | false |
+| DISABLE_UUID_LOGIN | Prevents users from being able to login with their client UUID. | false |
+| SSC_ENABLED | Enable server side characters, causing client data to be saved on the server instead of the client. | false |
+| SERVER_SIDE_CHARACTER_SAVE | How often SSC should save, in minutes. | 5 |
+| KEEP_PLAYER_APPEARANCE | If players should keep their local character appearance in SSC. | false |
+| STARTINGINVENTORY | The starting default inventory for new players when SSC is enabled. Click Here for more info. | (Empty) |
+| WORLD_NAME | Give your World a friendly name. | (Empty)?????????? |
+| WORLD_FILE | Specifies a name for the world file. | terraria_world.wld |
+| AUTO_CREATE | 1: Small, 2: Medium, 3: Large - create the world file with a given size. | 1 |
+| DIFFICULTY | Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey). This only affects new worlds. | 0???????????? |
+| WORLD_EVIL | Sets the world's evil state (random, corrupt, or crimson). | random????????? |
+| SEED | Specifies the world seed when using -autocreate. | random |
+| FORCE_UPDATE | Forces the server not to hibernate when there are no players. | false |
+| MOTD | Sets the Message of the Day. | (Empty) |
+| SECURE | Turns on the base game's "antispam" feature. | false |
+| LANG | Sets the server language (en-US, de-DE, it-IT, fr-FR, es-ES, ru-RU, zh-Hans, pt-BR, pl-PL). | (Empty) |
+| TZ | Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones | UTC |
 
 
 
