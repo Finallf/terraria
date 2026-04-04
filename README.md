@@ -240,7 +240,7 @@ The following tools were used in the construction of the project:
 		<tr>
             <td align="center">
                 <a href="https://github.com/Finallf">
-                    <img src="https://avatars.githubusercontent.com/u/8967685?v=4" width="100;" alt="Finallf"/>
+                    <kbd><img src="https://avatars.githubusercontent.com/u/8967685?v=4" width="100;" alt="Finallf"/></kbd>kbd>
                     <br />
                     <sub><b>Regis Vieira Delgado</b></sub>
                 </a>
