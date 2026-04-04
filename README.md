@@ -239,7 +239,7 @@ The following tools were used in the construction of the project:
   <tr>
     <td align="center">
       <a href="https://github.com/finallf">
-        <img style="border-radius: 50;" src="https://avatars.githubusercontent.com/u/8967685" width="100px;" alt=""/><br />
+        <img style="border-radius: 15px;" src="https://avatars.githubusercontent.com/u/8967685" width="100px;" alt=""/><br />
           <sub><b>Regis Vieira Delgado</b></sub>
       </a><br />
       <a href="https://github.com/finallf" title="Regis Vieira Delgado"></a>
