@@ -274,7 +274,7 @@ $ php
 
 Este projeto esta sobe a licença [GPL-3.0 license](?tab=GPL-3.0-1-ov-file#).
 
-<a href="?tab=GPL-3.0-1-ov-file#">GPL-3.0 license</a> •
+<a href="https://github.com/Finallf/terraria#">GPL-3.0 license</a> •
 
 
 Feito com ❤️ por Regis Vieira Delgado.
