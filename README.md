@@ -292,24 +292,24 @@ To ensure your server maintains its progress after reboots or image updates, it'
 <br>
 
 1. 📁 `/tshock/config`  
-	- **Contents:** JSON configuration files ( `config.json`, `sscconfig.json`, `permissions.json` ).  
+	- **Contents:** JSON configuration files and SQLite database (`config.json`, `sscconfig.json`, `tshock.sqlite`).  
 	- **Purpose:** This is the "brain" of the server rules. This volume is where our boot script performs dynamic changes. Note: The `sscconfig.json` file resides here and is where the initial inventory is managed.  
 
 <br>
 
-2. 📁 `/tshock/logs`  
+2. 📁 `/tshock/logs` ( optional )  
 	- **Contents:** The `container_init.log` file and native TShock logs.  
 	- **Purpose:** Auditing and diagnostics. This volume allows you to monitor what happened during boot ( such as the injection of items by `jq` ) and view server errors without needing to access the Docker console.
 
 <br>
 
-3. 📁 `/tshock/crashes` (optional - legacy)  
+3. 📁 `/tshock/crashes` ( optional - legacy )  
 	- **Contents:** Memory dump files (crash dumps) from an unexpected crash.  
 	- **Purpose:** This is only necessary if you are a TShock plugin developer or are debugging deep crashes (segfaults/memory crashes) and need to organize the `.dmp` files into a specific network folder or volume.
 
 <br>
 
-4. 📁 `/tshock/plugins`  
+4. 📁 `/tshock/plugins` ( optional )  
 	- **Contents:** Additional plugins and extensions for TShock.  
 	- **Purpose:** Customization. By mapping this volume, you can add new features to the server (such as saving systems or area protection) simply by copying the files to the folder on your host, without needing to rebuild the Docker image.  
 
