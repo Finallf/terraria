@@ -273,7 +273,7 @@ environment:
 &emsp;&emsp;&ensp;Syntax: `netID,prefix,stack:netID,prefix,stack:...`
 
 &emsp;&emsp;&ensp;Practical Example:  
-&emsp;&emsp;&ensp;For players to start with a Platinum Axe (netID: 3482), 10 Torches (netID: 8), and 5 Lesser Healing Potion (netID: 28):  
+&emsp;&emsp;&ensp;For players to start with a Platinum Axe (ID: 3482), 10 Torches (ID: 8), and 5 Lesser Healing Potion (ID: 28):  
 ```yml
 environment:
   - STARTINGINVENTORY=3482,0,1:8,0,10:28,0,5
