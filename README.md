@@ -12,7 +12,7 @@
 
 ---
 ## 🖥️ About the project
-### This is a high-performance <img alt="TShock Logo" style="width: 9%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png"> image for Terraria <img alt="TShock Logo" style="width: 7%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png"> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
+### This is a high-performance <a href="https://www.docker.com"><img alt="Docker Logo" style="width: 9%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png"></a> image for Terraria <a href="https://github.com/Pryaxis/TShock"><img alt="TShock Logo" style="width: 7%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png"></a> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
 
 <br>
 
@@ -125,9 +125,9 @@ If this is the first time running the container, it may take a while due to worl
 
 You can configure the server behavior using the variables below in your compose.yml file or via the -e flag in docker run:
 
-| Variable | Description | Default |
+|  ***Variable*** | ***Description*** | ***Default*** |
 |:---------|:-----------:|:-------:|
-| SERVER_PASSWORD | The server password required to join the server. | (Empty) |
+| SERVER_PASSWORD | The server password required to join the server. | false |
 | MAX_SLOTS | Maximum number of clients connected at once. | 8 |
 | REST_API_ENABLED | If true, activate the REST API. | false |
 | LOG_REST | If true, enables logging of REST API connections. | false |
@@ -135,12 +135,12 @@ You can configure the server behavior using the variables below in your compose.
 | SSC_ENABLED | If true, enables server-side character, causing client data to be saved on the server instead of the client. | false |
 | SSC_SAVE | How often SSC should save, in minutes. | 5 |
 | KEEP_PLAYER_APPEARANCE | If true, it allows players to retain the local appearance of their characters in SSC. | false |
-| STARTINGINVENTORY | If true, adds some items to the Inventory for new players when SSC is enabled. Click here for more information. | (Empty) |
-| WORLD_NAME | Give your World a friendly name. | (Empty)?????????? |
+| STARTINGINVENTORY | <details><summary>If true, adds some items to the Inventory for new players when SSC is enabled.<br>***Click here 👆 for more information.***</summary><br><div align="left">This variable can be configured in two distinct ways: using the value `true` or including a list of IDs.<br><br>If configured as true: `- STARTINGINVENTORY=true`<br>It will include the following predefined items for new players:<br>99 Glowsticks, 99 Ironskin Potions, 1 Aglet, 1 Ice Mirror, 1 Gravedigger's Shovel<br><br>Additionally, the variable can be configured to add any item to new players; simply add a list of IDs separated by colons, "ID,prefix,quantity:ID,prefix,quantity:etc".<br><br>Example: `STARTINGINVENTORY="292,0,50:285,0,1"`<br>In the example above, new players will receive 50 Ironskin Potions and 1 Aglet.</div><br></details> | false |
+| WORLD_NAME | Give your World a friendly name. | (Empty) |
 | WORLD_FILE | Specifies a name for the world file. | terraria_world.wld |
 | AUTO_CREATE | Creates the world file with the specified size (1: Small, 2: Medium, 3: Large). | 1 |
-| DIFFICULTY | Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey). This only affects new worlds. | 0???????????? |
-| WORLD_EVIL | Sets the world's evil state (random, corrupt, or crimson). | random????????? |
+| DIFFICULTY | Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey). This only affects new worlds. | 0?????? |
+| WORLD_EVIL | Sets the world's evil state (random, corrupt, or crimson). | random |
 | SEED | Specifies the world seed when using -autocreate. | random |
 | FORCE_UPDATE | If true, prevents the server from entering hibernation mode when there are no players. | false |
 | MOTD | Sets the Message of the Day. | (Empty) |
