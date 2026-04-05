@@ -84,8 +84,9 @@ docker run --rm -di --terraria finallf/terraria:latest
 ```
 
 <br>
-For everyday use, it's best to use docker compose.
-<br>
+
+For everyday use, it's best to use docker compose.<br>
+
 1. Create a compose.yml file similar to this:
 
 ```yml
