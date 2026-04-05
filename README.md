@@ -153,7 +153,7 @@ You can configure the server behavior using the variables below in your compose.
 
 > [!TIP]
 > <details>
->	<summary>Click here for a complete example of the compose.yml and .env files: 👆</summary><br>
+>	<summary>Click here 👆 for a complete example of the compose.yml and .env files:</summary><br>
 >
 > compose.yml:
 > ```yml
@@ -213,11 +213,11 @@ You can configure the server behavior using the variables below in your compose.
 >       - TZ=America/Sao_Paulo
 >     volumes:
 >       # TShock paths to settings, SQLite database, log files, crash files, plugins, and world files.
->       - ${SSD}/terraria/config:/tshock/config
->       - ${SSD}/terraria/logs:/tshock/logs
->       - ${SSD}/terraria/crashes:/tshock/crashes
->       - ${SSD}/terraria/plugins:/tshock/plugins
->       - ${SSD}/terraria/worlds:/tshock/worlds
+>       - ${SSD}/config:/tshock/config
+>       - ${SSD}/logs:/tshock/logs
+>       - ${SSD}/crashes:/tshock/crashes
+>       - ${SSD}/plugins:/tshock/plugins
+>       - ${SSD}/worlds:/tshock/worlds
 >     ports:
 >       - "7777:7777"
 >       # The port used by the REST API.
@@ -229,7 +229,7 @@ You can configure the server behavior using the variables below in your compose.
 > ```
 > .env
 > ```
-> SSD=/mnt/ssd
+> SSD=/mnt/ssd/terraria
 > ```
 > </details>
 
@@ -245,8 +245,7 @@ The script processes this information atomically on boot using jq.
 
 🔹 **Option 1: Basic Kit (Quick Mode)**  
 &emsp;&ensp;&nbsp;- If you set the variable to `true`, the server automatically injects a default starter kit:  
-&emsp;&emsp;&ensp;(99 Glowsticks, 99 Ironskin Potions, 1 Aglet, 1 Ice Mirror, 1 Gravedigger's Shovel).
-
+&emsp;&emsp;&ensp;(99 Glowsticks, 99 Ironskin Potions, 1 Aglet, 1 Ice Mirror, 1 Gravedigger's Shovel).  
 ```yml
 environment:
   - STARTINGINVENTORY=true
@@ -261,14 +260,60 @@ environment:
 &emsp;&emsp;&ensp;Syntax: `netID,prefix,stack:netID,prefix,stack:...`
 
 &emsp;&emsp;&ensp;Practical Example:  
-&emsp;&emsp;&ensp;For players to start with a Platinum Axe (netID: 3482), 10 Torches (netID: 8), and 5 Lesser Healing Potion (netID: 28):
-
+&emsp;&emsp;&ensp;For players to start with a Platinum Axe (netID: 3482), 10 Torches (netID: 8), and 5 Lesser Healing Potion (netID: 28):  
 ```yml
 environment:
   - STARTINGINVENTORY=3482,0,1:8,0,10:28,0,5
 ```
 > [!TIP]
 > You can find the complete list of Terraria item netIDs on the [Official Wiki](https://terraria.wiki.gg/wiki/Item_IDs).
+
+<br>
+
+---
+## 🛡️ Monitoring and Logs
+This image was designed following the philosophy of **total observability**. Every step of the initialization and every command sent to the server is recorded with chronological precision.  
+
+<br>
+
+📁 ***Log Locations***  
+To persist logs outside the container, map a volume in your `compose.yml file`:
+```yml
+volumes:
+  - /path/to/host/logs:/tshock/logs
+```
+
+The main file will be container_init.log, where you will find the complete trace of:
+
+- Injection of items and boot scripts.
+- Creation and status of the Named Pipe communication system.
+- Real-time output from the TShock console (STDOUT/STDERR).
+
+<br>
+
+🕒 ***Precision Timestamps***  
+Unlike standard logs, our system prefixes each line with a customizable timestamp:  
+
+`[2026-04-05 14:30:05] [INFO] Items successfully added to starting inventory.`  
+
+This allows you to cross-reference error information with events from your file system or network on the host.
+
+<br>
+
+📟 ***Console-based interactivity (Named Pipe)***  
+Since the server runs in the background to allow monitoring, you don't use `docker attach`.  
+To send commands (such as `kick`, `ban`, or `save`), use the built-in **Named Pipe**:  
+
+Example of a command via the terminal:
+```bash
+docker exec -i [container_name] sh -c 'echo "say Hello Terrarians!" > /tmp/terraria_input'
+```
+
+<br>
+
+🛑 ***Graceful Shutdown***  
+When you send a `docker stop` command, the container captures the interrupt signal and automatically executes a save script.  
+This ensures that the world's progress is written to disk before the process is terminated, preventing the dreaded "roll-back" of items.
 
 <br>
 
