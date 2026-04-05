@@ -95,7 +95,6 @@ services:
   terraria:
     image: finallf/terraria:latest
     container_name: terraria
-    user: 1000:0
     stdin_open: true
     tty: false
     environment:
@@ -117,7 +116,9 @@ These are the minimum required settings.<br>
 For more refined settings, see the [Environment Variables](#%EF%B8%8F-environment-variables) section for more information.  
 <br>
 
-2. Make sure that the folders on the host have the correct permissions for the **UID** configured in compose.yml.  
+2. Make sure that the folders on the host have the correct permissions for the **UID**, the container runs by default with **UID** `1000`.  
+
+<br>
 
 3. To begin, run the following command in the terminal, in the directory containing the compose.yml file:
 ```bash
@@ -279,7 +280,52 @@ environment:
   - STARTINGINVENTORY=3482,0,1:8,0,10:28,0,5
 ```
 > [!TIP]
-> You can find the complete list of Terraria item netIDs on the [Official Wiki](https://terraria.wiki.gg/wiki/Item_IDs).
+> You can find the complete list of Terraria item netIDs on the [Official Wiki](https://terraria.wiki.gg/wiki/Item_IDs).  
+
+<br>
+
+---
+## 🔐 Security and Permissions (Rootless Architecture)
+To ensure the highest level of security, this image was built following the **Rootless** standard. This means that the TShock server and all internal scripts **do not run as administrator (root)** within the container.  
+
+This prevents game vulnerabilities from compromising your physical server (host), but requires correct configuration of the permissions for the mapped folders in your `compose.yml` file.  
+
+<br>
+
+🔹 **How does a static UID/GID work**  
+By default, the container's internal process runs with a static User ID (e.g., UID `1000`) and belongs to the Root Group (GID `0`).  
+- **Why Group 0?** Using GID `0` is a recommended practice (adopted by platforms like Red Hat OpenShift) that allows for flexibility. The container does not require that the user who owns the folder on the host be exactly `1000`, as long as the folder's group allows read and write access.
+
+🔹 **How to prepare your folders on the Host**  
+Before starting the container for the first time, you need to ensure that the directory where the volumes will be saved allows writing.  
+
+<br>
+
+- **Method 1: Adjust the owner in the container (Recommended)**  
+If you want to be strict, change the **UID** in your `compose.yml` file to match the **UID** of your **host** (replace `1000` with your **UID**):  
+```yml
+services:
+  terraria:
+    user: 1000:0
+```
+
+<br>
+
+- **Method 2: Adjust the owner on the host (no flexibility)**  
+Alternatively, you can change the folder **owner** on your **host** to match the container **UID**:  
+```bash
+sudo chown -R 1000:1000 ./terraria
+```
+
+<br>
+
+- **Method 3: Group 0 (More flexible)**  
+If you don't want to change the user who owns your folder, simply grant write permission to Group `0`:  
+```bash
+sudo chgrp -R 0 ./terraria
+sudo chmod -R g+rwX ./terraria
+```
+Whichever method you choose, the container will be able to write logs, worlds, and `sscconfig.json` without permission conflicts, keeping Rootless security intact.  
 
 <br>
 
