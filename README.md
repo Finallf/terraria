@@ -88,7 +88,6 @@ docker run --rm -di --terraria finallf/terraria:latest
 For everyday use, it's best to use docker compose.<br>
 
 1. Create a compose.yml file similar to this:
-
 ```yml
 services:
   terraria:
@@ -107,8 +106,8 @@ services:
       - "7777:7777"
     restart: unless-stopped
 ```
-This is the bare minimum configuration required.
-See the [Environment](#gear-environment-variables) for more.
+These are the minimum required settings.<br>
+For more refined settings, see the [Environment Variables](#gear-environment-variables) section for more information.
 
 <br>
 
