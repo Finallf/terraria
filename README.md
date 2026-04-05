@@ -4,11 +4,9 @@
 
 <p align="center">
 	<a href="#-features">Features</a> •
-	<a href="#%EF%B8%8F-minimum-requirements">Minimum Requirements</a> •
+	<a href="#%EF%B8%8F-minimum-requirements">Requirements</a> •
 	<a href="#-quick-setup">Quick Setup</a> •
 	<a href="#%EF%B8%8F-environment-variables">Environment Variables</a> •
-	<a href="#-how-to-contribute-to-the-project">How to contribute to the project</a> •
-	<a href="#%EF%B8%8F-technologies">Technologies</a> •
 	<a href="#%E2%80%8D-collaborators">Collaborators:</a> •
 	<a href="#%E2%80%8D-contributors">Author:</a> •
 	<a href="#%E2%80%8D%EF%B8%8F-author">Autor</a> •
