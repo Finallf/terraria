@@ -9,6 +9,7 @@
 	<a href="#%EF%B8%8F-minimum-requirements">Requirements</a>&nbsp; • &nbsp;
 	<a href="#-quick-setup">Quick Setup</a>&nbsp; • &nbsp;
 	<a href="#%EF%B8%8F-environment-variables">Environment Variables</a>&nbsp; • &nbsp;
+	<a href="#-dynamic-inventory--startinginventory-">Dynamic Inventory</a>&nbsp; • &nbsp;
 	<a href="#%E2%80%8D%EF%B8%8F-author">Author</a>
 </p>
 
