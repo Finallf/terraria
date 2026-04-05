@@ -1,14 +1,14 @@
 <h4 align="center">
-  <img alt="Terraria Logo" src="https://static.wikia.nocookie.net/terraria_gamepedia/images/a/a4/NewPromoLogo.png">&emsp;
+  <img alt="Terraria Logo" src="https://static.wikia.nocookie.net/terraria_gamepedia/images/a/a4/NewPromoLogo.png">
 </h4>
 
 <p align="center">
-	<a href="#-about-the-project">About</a> •
-	<a href="#%EF%B8%8F-features">Features</a> •
-	<a href="#why-use-this-image">Why use this image</a> • 
-	<a href="#-technologies-">Technologies</a> • 
-	<a href="#%EF%B8%8F-variáveis-de-ambiente-environment-variables">Environment Variables</a> • 
-	<a href="#-instalação-no-windows">Instalação no Windows</a> • 
+	<a href="#desktop_computer-about-the-project">About</a> •
+	<a href="#feather-features">Features</a> •
+	<a href="#hammer_and_wrench-minimum-requirements">Requirements</a> •
+	<a href="#gear-environment-variables">Environment</a> •
+	<a href="#-technologies-">Technologies</a> •
+	<a href="#-instalação-no-windows">Instalação no Windows</a> •
 	<a href="#-rodando-o-backend-servidor">Rodando o Backend (servidor)</a> •
 	<a href="#%E2%80%8D-contributors">Contributors</a> •
 	<a href="#-autor">Autor</a> •
@@ -16,7 +16,7 @@
 </p>
 
 ---
-## 💻 About the project
+## :desktop_computer: About the project
 This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png"> image for Terraria <img alt="TShock Logo" style="width: 5%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png"> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
 
 <div align="center">
@@ -38,7 +38,7 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 </div>
 
 ---
-## ⚙️ Features
+## :feather: Features
 ### Internal Architecture (Without Supervisor):
  - ✅ Native and lightweight execution, optimized for high-performance Linux and container environments, completely rootless.
 
@@ -58,7 +58,7 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 
 ---
 
-## Why use this image❓
+## :question: Why use this image
  
  - If you manage servers in any professional Docker environment, you know that visibility is everything.
 
@@ -67,15 +67,54 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 <br>
 
 ---
-> [!WARNING]
-> Minimum Requirements
-
-✔️ Working Docker installation
+## :hammer_and_wrench: Minimum Requirements
+> [!IMPORTANT]
+> ✔️ Working Docker installation
+>
+> ✔️ Basic knowledge of Docker.
 
 <br>
 
 ---
-### ⚙️ Environment Variables
+## :toolbox: Quick Setup
+
+1. Create a docker-compose.yml file similar to this:
+
+```yml
+services:
+  terraria:
+    image: finallf/terraria:latest
+    container_name: terraria
+    user: 1000:0
+    stdin_open: true
+    tty: false
+    volumes:
+      - ./terraria/config:/tshock/config
+      - ./terraria/logs:/tshock/logs
+      - ./terraria/crashes:/tshock/crashes
+      - ./terraria/plugins:/tshock/plugins
+      - ./terraria/worlds:/tshock/worlds
+    ports:
+      - "7777:7777"
+    restart: unless-stopped
+```
+This is the bare minimum configuration required.
+See the [Environment](#gear-environment-variables) for more.
+
+<br>
+
+2. Bring up your stack by running
+```bash
+docker compose up -d
+```
+Once your Docker container is running, open your Terraria client and connect using the host's IP address and the default port 7777.
+
+If this is the first time running the container, it may take a while due to world creation.
+
+<br>
+
+---
+## :gear: Environment Variables
 
 You can configure the server behavior using the variables below in your docker-compose.yml file or via the -e flag in docker run:
 
@@ -102,41 +141,14 @@ You can configure the server behavior using the variables below in your docker-c
 | LANG | Sets the server language (en-US, de-DE, it-IT, fr-FR, es-ES, ru-RU, zh-Hans, pt-BR, pl-PL). | (Empty) |
 | TZ | Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones | UTC |
 
+<br>
 
-
-
-> [!NOTE]
-> Highlights information that users should take into account.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]
-> Critical content demanding immediate user attention.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
+---
 
 
 
 
 
-
-
-## 🔵 Instalação no Windows.
-
-### Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[GIT](https://git-scm.com/download/win), [Apache](https://httpd.apache.org/docs/2.4/platform/windows.html), [Mysql](https://dev.mysql.com/downloads/installer/) (Ou qualquer outro tipo de banco de dados), [Composer](https://getcomposer.org/download/)
-
-Se você não sabe instalar e configurar um ambiente de servidor, pode utilizar ferramentas que já vem tudo pronto como:
-[Apache](https://www.apachefriends.org/pt_br/download.html) [Wamp](https://www.wampserver.com/en/)
-
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 #### 🎲 Rodando o Backend (servidor)
 
@@ -280,3 +292,18 @@ The following tools were used in the construction of the project:
 ## 📝 License:
 
 This project is licensed under: [GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file).
+
+> [!NOTE]
+> Highlights information that users should take into account.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
