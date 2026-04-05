@@ -58,7 +58,7 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 
 ---
 
-## :question: Why use this image
+## :question: Why use this image?
  
  - If you manage servers in any professional Docker environment, you know that visibility is everything.
 
@@ -267,7 +267,7 @@ The following tools were used in the construction of the project:
 
 ---
 ## 👨‍💻 Collaborators:
-💜 Thank you to everyone who contributed to improving the project :)
+💜 Thank you to everyone who contributed to the improvement of this project :)
 
 <!-- readme: collaborators,contributors -start -->
 <table>
