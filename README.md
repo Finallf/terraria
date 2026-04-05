@@ -3,9 +3,7 @@
 </h4>
 
 <p align="center">
-	<a href="#%EF%B8%8F-about-the-project">About</a> •
 	<a href="#-features">Features</a> •
-	<a href="#-why-use-this-image">Why use this image?</a> •
 	<a href="#%EF%B8%8F-minimum-requirements">Minimum Requirements</a> •
 	<a href="#-quick-setup">Quick Setup</a> •
 	<a href="#%EF%B8%8F-environment-variables">Environment Variables</a> •
