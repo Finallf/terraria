@@ -241,9 +241,12 @@ You can configure the server behavior using the variables below in your compose.
 > [!NOTE]
 > If you have any questions, check out this guide on how to contribute on GitHub: [📖](https://github.com/Finallf/terraria?tab=contributing-ov-file)<br>
 > 1. Fork the project.
-> 2. Create a new branch with your changes: `git checkout -b my-feature`
-> 3. Save the changes and create a commit message describing what you did: `git commit -m "feature: My new feature"`
-> 4. Send your changes: `git push origin my-feature`
+> 2. Create a new branch with your changes:<br>
+> `git checkout -b my-feature`
+> 4. Save the changes and create a commit message describing what you did:<br>
+> `git commit -m "feature: My new feature"`
+> 6. Send your changes:<br>
+> `git push origin my-feature`
 
 <br>
 
