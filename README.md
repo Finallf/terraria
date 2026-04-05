@@ -84,9 +84,9 @@ docker run --rm -di --terraria finallf/terraria:latest
 ```
 
 <br>
-For everyday use, it's best to use docker-compose.
-
-1. Create a docker-compose.yml file similar to this:
+For everyday use, it's best to use docker compose.
+<br>
+1. Create a compose.yml file similar to this:
 
 ```yml
 services:
@@ -124,7 +124,7 @@ If this is the first time running the container, it may take a while due to worl
 ---
 ## :gear: Environment Variables
 
-You can configure the server behavior using the variables below in your docker-compose.yml file or via the -e flag in docker run:
+You can configure the server behavior using the variables below in your compose.yml file or via the -e flag in docker run:
 
 | Variable | Description | Default |
 |:---------|:-----------:|:-------:|
