@@ -3,10 +3,10 @@
 </h4>
 
 <p align="center">
-	<a href="#-features">Features</a>&nbsp;
-	<a href="#%EF%B8%8F-minimum-requirements">Requirements</a>&nbsp;
-	<a href="#-quick-setup">Quick Setup</a>&nbsp;
-	<a href="#%EF%B8%8F-environment-variables">Environment Variables</a>&nbsp;
+	<a href="#-features">Features</a>&nbsp; • &nbsp;
+	<a href="#%EF%B8%8F-minimum-requirements">Requirements</a>&nbsp; • &nbsp;
+	<a href="#-quick-setup">Quick Setup</a>&nbsp; • &nbsp;
+	<a href="#%EF%B8%8F-environment-variables">Environment Variables</a>&nbsp; • &nbsp;
 	<a href="#%E2%80%8D%EF%B8%8F-author">Author</a>
 </p>
 
