@@ -1,6 +1,6 @@
-<h4 align="center">
-  <img alt="Terraria Logo" src="https://static.wikia.nocookie.net/terraria_gamepedia/images/a/a4/NewPromoLogo.png">
-</h4>
+<div align="center">
+	<a href="https://terraria.org/"><img alt="Terraria Logo" src="https://static.wikia.nocookie.net/terraria_gamepedia/images/a/a4/NewPromoLogo.png"></a>
+</div>
 
 <p align="center">
 	<a href="#-features">Features</a>&nbsp; • &nbsp;
