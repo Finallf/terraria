@@ -106,7 +106,7 @@ services:
     restart: unless-stopped
 ```
 These are the minimum required settings.<br>
-For more refined settings, see the [Environment Variables](#gear-environment-variables) section for more information.
+For more refined settings, see the [Environment Variables](#%EF%B8%8F-environment-variables) section for more information.
 
 <br>
 
