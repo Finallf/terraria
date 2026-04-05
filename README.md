@@ -7,8 +7,7 @@
 	<a href="#%EF%B8%8F-minimum-requirements">Requirements</a> •
 	<a href="#-quick-setup">Quick Setup</a> •
 	<a href="#%EF%B8%8F-environment-variables">Environment Variables</a> •
-	<a href="#%E2%80%8D%EF%B8%8F-author">Autor</a> •
-	<a href="#-license">License:</a>
+	<a href="#%E2%80%8D%EF%B8%8F-author">Author</a> •
 </p>
 
 ---
