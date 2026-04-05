@@ -77,6 +77,14 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 
 ---
 ## :toolbox: Quick Setup
+If you want to test the container, use the shell command:
+
+```bash
+docker run --rm -di --terraria finallf/terraria:latest
+```
+
+<br>
+For everyday use, it's best to use docker-compose.
 
 1. Create a docker-compose.yml file similar to this:
 
@@ -141,95 +149,101 @@ You can configure the server behavior using the variables below in your docker-c
 | LANG | Sets the server language (en-US, de-DE, it-IT, fr-FR, es-ES, ru-RU, zh-Hans, pt-BR, pl-PL). | (Empty) |
 | TZ | Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones | UTC |
 
-<br>
-
----
-
-
-
-
-
-
-#### 🎲 Rodando o Backend (servidor)
-
-```bash
-
-# Clone este projeto
-$ 
-
-# Ou baixe o projeto direto do repositório: https://github.com/rscodexx/ragpainel
-
-# Renomeie o arquivo .env-example(está na pasta raiz do projeto) para .env e configure.
-
-APP_NAME=Laravel #Nome do seu servidor
-APP_URL=/ # Url do seu servidor
-
-DB_CONNECTION=mysql #Tipo de banco de dados.
-DB_HOST=127.0.0.1 #IP do banco de dados.
-DB_PORT=3306 #Porta do banco de dados.
-DB_DATABASE= #Tabela do banco de dados.
-DB_USERNAME= #Usuário do banco de dados
-DB_PASSWORD= #Senha do banco de dados.
-TIMEZONE=America/Sao_Paulo #Horário
-LOCALE=pt-BR #Idioma geral.
-FALLBACK_LOCALE=pt-BR #Idioma das mensagens de erro.
-
-MAIL_MAILER=smtp #Tipo de e-mail
-MAIL_HOST=mailhog #Host do e-mail
-MAIL_PORT=1025 # Porta do e-mail
-MAIL_USERNAME=null #Seu e-mail
-MAIL_PASSWORD=null #Senha do seu e-mail
-MAIL_ENCRYPTION=null # Tipo de encriptação do e-mail.
-MAIL_FROM_NAME="${APP_NAME}"
-
-# Acesse a pasta do projeto em seu terminal/cmd
-$ cd 
-
-# Após entrar no diretório do projeto instale o composer e suas dependências.
-$ composer install
-
-# Aguarde a instalação.
-
-# Instale todas tabelas do painel, ainda com cmd aberto no diretório do projeto utilize:
-$ php artisan migrate
-
-# Pronto, o seu servidor está instalado e configurado.
-
-```
-
-#### 🧭 Rodando a aplicação web (Frontend)
-
-```bash
-
-# Inicie o seu servidor, para acessar o painel é necessário acessar a pasta public, um exemplo abaixo:
-
-$ http://localhos
-
-# Você também pode rodar a aplicação sem precisar de um servidor apache configurado através do php artisan.
-
-# Acesse a pasta do projeto em seu terminal/cmd
-$ cd 
-
-# Digite o comando:
-$ php 
-
-# Basta clicar no link gerado para iniciar o painel.
-
-# Use o comando CTRL + C para desligar o servidor.
-
-```
+> [!TIP]
+> <details>
+>	<summary>Click here for a complete example of the compose.yml and .env files:</summary><br>
+>
+> compose.yml:
+> ```yml
+> networks:
+>   terraria:
+>     external: false
+>     name: terraria
+> 
+> services:
+>   terraria:
+>     image: finallf/terraria:latest
+>     container_name: terraria
+>     user: 1000:0
+>     stdin_open: true
+>     tty: false
+>     environment:
+>       # World Variables:
+>         # - SERVER_PASSWORD - The server password required to join the server.
+>         # - MAX_SLOTS - Maximum number of clients connected at once.
+>         # - REST_API_ENABLED - Enable or disable the REST API.
+>         # - LOG_REST - Whether or not to log REST API connections.
+>         # - DISABLE_UUID_LOGIN - Prevents users from being able to login with their client UUID.
+>         # - SSC_ENABLED - Enable server side characters, causing client data to be saved on the server instead of the client.
+>         # - SSC_SAVE - How often SSC should save, in minutes.
+>         # - KEEP_PLAYER_APPEARANCE - If players should keep their local character appearance in SSC.
+>         # - STARTINGINVENTORY - The starting default inventory for new players when SSC is enabled. Readme.md for more info.
+>         # - WORLD_NAME - Give your World a friendly name.
+>         # - WORLD_FILE - Specifies a name for the world file.
+>         # - AUTO_CREATE - 1: Small, 2: Medium, 3: Large - create the world file with a given size.
+>         # - DIFFICULTY - Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey).
+>         # - WORLD_EVIL - Sets the world's evil state (random, corrupt, or crimson).
+>         # - SEED - Specifies the world seed when using -autocreate.
+>         # - FORCE_UPDATE - Forces the server not to hibernate when there are no players.
+>         # - MOTD - Sets the Message of the Day.
+>         # - SECURE - Turns on the base game's "antispam" feature.
+>         # - LANG - Sets the server language (en-US, de-DE, it-IT, fr-FR, es-ES, ru-RU, zh-Hans, pt-BR, pl-PL).
+>         # - TZ - Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+>       - SERVER_PASSWORD=123456
+>       - MAX_SLOTS=16
+>       - REST_API_ENABLED=true
+>       - LOG_REST=true
+>       - DISABLE_UUID_LOGIN=true
+>       - SSC_ENABLED=true
+>       - SSC_SAVE=1
+>       - KEEP_PLAYER_APPEARANCE=true
+>       - STARTINGINVENTORY=true
+>       - WORLD_NAME=ReloadeD Server
+>       - WORLD_FILE=my_world.wld
+>       - AUTO_CREATE=3
+>       - DIFFICULTY=2
+>       - WORLD_EVIL=crimson
+>       - SEED=fortheworthy
+>       - FORCE_UPDATE=true
+>       - MOTD=Welcome to My Server!
+>       - SECURE=true
+>       - LANG=pt-BR
+>       - TZ=America/Sao_Paulo
+>     volumes:
+>       # TShock paths to settings, SQLite database, log files, crash files, plugins, and world files.
+>       - ${SSD}/terraria/config:/tshock/config
+>       - ${SSD}/terraria/logs:/tshock/logs
+>       - ${SSD}/terraria/crashes:/tshock/crashes
+>       - ${SSD}/terraria/plugins:/tshock/plugins
+>       - ${SSD}/terraria/worlds:/tshock/worlds
+>     ports:
+>       - "7777:7777"
+>       # The port used by the REST API.
+>       - "7878:7878"
+>     networks:
+>       - terraria
+>     stop_grace_period: 30s
+>     restart: unless-stopped
+> ```
+> .env
+> ```
+> SSD=/mnt/ssd
+> ```
+> </details>
+> <p>
+> Don't forget to adjust the options to suit your specific situation.
 
 <br>
 
 ---
 ## 💪 How to contribute to the project
 
-1. Fork the project.
-2. Create a new branch with your changes: `git checkout -b my-feature`
-3. Save the changes and create a commit message describing what you did: `git commit -m "feature: My new feature"`
-4. Send your changes: `git push origin my-feature`
-> [!TIP]
-> If you have any questions, check out this guide on how to contribute on GitHub: [📖](https://github.com/Finallf/terraria?tab=contributing-ov-file)
+> [!NOTE]
+> If you have any questions, check out this guide on how to contribute on GitHub: [📖](https://github.com/Finallf/terraria?tab=contributing-ov-file)<br>
+> 1. Fork the project.
+> 2. Create a new branch with your changes: `git checkout -b my-feature`
+> 3. Save the changes and create a commit message describing what you did: `git commit -m "feature: My new feature"`
+> 4. Send your changes: `git push origin my-feature`
 
 <br>
 
