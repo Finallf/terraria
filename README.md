@@ -139,7 +139,7 @@ You can configure the server behavior using the variables below in your compose.
 | WORLD_NAME | Give your World a friendly name. | (Empty) |
 | WORLD_FILE | Specifies a name for the world file. | terraria_world.wld |
 | AUTO_CREATE | Creates the world file with the specified size (1: Small, 2: Medium, 3: Large). | 1 |
-| DIFFICULTY | Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey). This only affects new worlds. | 0?????? |
+| DIFFICULTY | Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey). This only affects new worlds. | 0 |
 | WORLD_EVIL | Sets the world's evil state (random, corrupt, or crimson). | random |
 | SEED | Specifies the world seed when using -autocreate. | random |
 | FORCE_UPDATE | If true, prevents the server from entering hibernation mode when there are no players. | false |
