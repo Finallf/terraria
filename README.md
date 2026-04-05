@@ -111,7 +111,7 @@ For more refined settings, see the [Environment Variables](#gear-environment-var
 
 <br>
 
-2. To bring up your Docker stack, run the following command in your terminal within the directory containing your compose.yml file:
+2. To begin, run the following command in the terminal, in the directory containing the compose.yml file:
 ```bash
 docker compose up -d
 ```
