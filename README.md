@@ -3,20 +3,22 @@
 </h4>
 
 <p align="center">
-	<a href="#desktop_computer-about-the-project">About</a> •
-	<a href="#feather-features">Features</a> •
-	<a href="#hammer_and_wrench-minimum-requirements">Requirements</a> •
-	<a href="#gear-environment-variables">Environment</a> •
-	<a href="#-technologies-">Technologies</a> •
-	<a href="#-instalação-no-windows">Instalação no Windows</a> •
-	<a href="#-rodando-o-backend-servidor">Rodando o Backend (servidor)</a> •
-	<a href="#%E2%80%8D-contributors">Contributors</a> •
-	<a href="#-autor">Autor</a> •
-	<a href="#user-content--licença">Licença</a>
+	<a href="#%EF%B8%8F-about-the-project">About</a> •
+	<a href="#-features">Features</a> •
+	<a href="#-why-use-this-image">Why use this image?</a> •
+	<a href="#%EF%B8%8F-minimum-requirements">Minimum Requirements</a> •
+	<a href="#-quick-setup">Quick Setup</a> •
+	<a href="#%EF%B8%8F-environment-variables">Environment Variables</a> •
+	<a href="#-how-to-contribute-to-the-project">How to contribute to the project</a> •
+	<a href="#%EF%B8%8F-technologies">Technologies</a> •
+	<a href="#%E2%80%8D-collaborators">Collaborators:</a> •
+	<a href="#%E2%80%8D-contributors">Author:</a> •
+	<a href="#%E2%80%8D%EF%B8%8F-author">Autor</a> •
+	<a href="#-license">License:</a>
 </p>
 
 ---
-## 🖥️ About the project
+# 🖥️ About the project
 This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png"> image for Terraria <img alt="TShock Logo" style="width: 5%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png"> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
 
 <div align="center">
@@ -36,6 +38,8 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
   &nbsp;
   <a href="https://github.com/finallf/terraria"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/finallf/terraria"></a>
 </div>
+
+<br>
 
 ---
 ## 🪶 Features
@@ -58,7 +62,7 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 
 ---
 
-## ❓ Why use this image?
+### ❓ Why use this image?
  
  - If you manage servers in any professional Docker environment, you know that visibility is everything.
 
