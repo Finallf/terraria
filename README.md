@@ -19,7 +19,7 @@
 
 ---
 ## 🖥️ About the project
-### This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png"> image for Terraria <img alt="TShock Logo" style="width: 5%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png"> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
+### This is a high-performance <img alt="TShock Logo" style="width: 8%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png"> image for Terraria <img alt="TShock Logo" style="width: 6%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png"> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
 
 <br>
 
