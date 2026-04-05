@@ -2,6 +2,8 @@
 	<a href="https://terraria.org/"><img alt="Terraria Logo" src="https://static.wikia.nocookie.net/terraria_gamepedia/images/a/a4/NewPromoLogo.png"></a>
 </div>
 
+<br>
+
 <p align="center">
 	<a href="#-features">Features</a>&nbsp; • &nbsp;
 	<a href="#%EF%B8%8F-minimum-requirements">Requirements</a>&nbsp; • &nbsp;
