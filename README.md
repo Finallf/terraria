@@ -255,7 +255,7 @@ You can configure the server behavior using the variables below in your compose.
 ---
 ## 🎒 Dynamic Inventory ( STARTINGINVENTORY )
 The Dynamic Inventory system allows you to define which items new players will receive when they first join the server, without needing to edit files manually.
-The script processes this information atomically on boot using jq.
+The script processes this information atomically on boot using `jq`.
 
 🔹 **Option 1: Basic Kit (Quick Mode)**  
 &emsp;&ensp;&nbsp;- If you set the variable to `true`, the server automatically injects a default starter kit:  
