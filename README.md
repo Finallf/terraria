@@ -16,7 +16,7 @@
 </p>
 
 ---
-## :desktop_computer: About the project
+## 🖥️ About the project
 This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png"> image for Terraria <img alt="TShock Logo" style="width: 5%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png"> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
 
 <div align="center">
@@ -38,7 +38,7 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 </div>
 
 ---
-## :feather: Features
+## 🪶 Features
 ### Internal Architecture (Without Supervisor):
  - ✅ Native and lightweight execution, optimized for high-performance Linux and container environments, completely rootless.
 
@@ -58,7 +58,7 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 
 ---
 
-## :question: Why use this image?
+## ❓ Why use this image?
  
  - If you manage servers in any professional Docker environment, you know that visibility is everything.
 
@@ -67,7 +67,7 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 <br>
 
 ---
-## :hammer_and_wrench: Minimum Requirements
+## ⚒️ Minimum Requirements
 > [!IMPORTANT]
 > ✔️ Working Docker installation
 >
@@ -76,7 +76,7 @@ This is a high-performance <img alt="TShock Logo" style="width: 7%" src="https:/
 <br>
 
 ---
-## :toolbox: Quick Setup
+## 🧰 Quick Setup
 If you want to test the container, use the shell command:
 
 ```bash
@@ -122,7 +122,7 @@ If this is the first time running the container, it may take a while due to worl
 <br>
 
 ---
-## :gear: Environment Variables
+## ⚙️ Environment Variables
 
 You can configure the server behavior using the variables below in your compose.yml file or via the -e flag in docker run:
 
@@ -251,7 +251,7 @@ You can configure the server behavior using the variables below in your compose.
 <br>
 
 ---
-## 🛠 Technologies
+## 🛠️ Technologies
 
 The following tools were used in the construction of the project:
 
@@ -266,7 +266,7 @@ The following tools were used in the construction of the project:
 <br>
 
 ---
-## 👨‍💻 Collaborators:
+## 🧑‍💻 Collaborators:
 💜 Thank you to everyone who contributed to the improvement of this project :)
 
 <!-- readme: collaborators,contributors -start -->
@@ -288,7 +288,7 @@ The following tools were used in the construction of the project:
 <br>
 
 ---
-## 🦸 Author:
+## 🧙‍♂️ Author:
 <div align="center">
 	<a href="https://reloaded.com.br">
 		<kbd><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></kbd>
