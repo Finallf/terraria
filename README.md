@@ -87,9 +87,9 @@ docker run --rm -di --terraria finallf/terraria:latest
 
 <br>
 
-The recommended way to run your server is using Docker Compose.  
+The recommended way to run your server is using **Docker Compose**.  
 
-1. Create a compose.yml file and adapt the volume paths to your environment, similar to this:  
+1. Create a `compose.yml` file and adapt the volume paths to your environment, similar to this:  
 ```yml
 services:
   terraria:
@@ -117,7 +117,7 @@ These are the minimum required settings.<br>
 For more refined settings, see the [Environment Variables](#%EF%B8%8F-environment-variables) section for more information.  
 <br>
 
-2. Make sure that the folders on the host have the correct permissions for the UID configured in compose.yml.  
+2. Make sure that the folders on the host have the correct permissions for the **UID** configured in compose.yml.  
 
 3. To begin, run the following command in the terminal, in the directory containing the compose.yml file:
 ```bash
