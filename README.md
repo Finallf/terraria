@@ -151,7 +151,7 @@ You can configure the server behavior using the variables below in your compose.
 
 > [!TIP]
 > <details>
->	<summary>Click here for a complete example of the compose.yml and .env files:</summary><br>
+>	<summary>Click here for a complete example of the compose.yml and .env files: 👆</summary><br>
 >
 > compose.yml:
 > ```yml
@@ -230,7 +230,8 @@ You can configure the server behavior using the variables below in your compose.
 > SSD=/mnt/ssd
 > ```
 > </details>
-> <p>
+
+> [!CAUTION]
 > Don't forget to adjust the options to suit your specific situation.
 
 <br>
@@ -309,20 +310,3 @@ The following tools were used in the construction of the project:
 ## 📝 License:
 > [!WARNING]
 > This project is licensed under: [GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file).
-
-
-
-> [!NOTE]
-> Highlights information that users should take into account.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]
-> Critical content demanding immediate user attention.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
