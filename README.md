@@ -137,7 +137,7 @@ You can configure the server behavior using the variables below in your compose.
 | SSC_ENABLED | If true, enables server-side character, causing client data to be saved on the server instead of the client. | false |
 | SSC_SAVE | How often SSC should save, in minutes. | 5 |
 | KEEP_PLAYER_APPEARANCE | If true, it allows players to retain the local appearance of their characters in SSC. | false |
-| STARTINGINVENTORY | <details><summary>If true, adds some items to the Inventory for new players when SSC is enabled.<br>***Click here 👆 for more information.***</summary><br><div align="left">This variable can be configured in two distinct ways: using the value `true` or including a list of IDs.<br><br>If configured as true: `- STARTINGINVENTORY=true`<br>It will include the following predefined items for new players:<br>99 Glowsticks, 99 Ironskin Potions, 1 Aglet, 1 Ice Mirror, 1 Gravedigger's Shovel<br><br>Additionally, the variable can be configured to add any item to new players; simply add a list of IDs separated by colons, "ID,prefix,quantity:ID,prefix,quantity:etc".<br><br>Example: `STARTINGINVENTORY="292,0,50:285,0,1"`<br>In the example above, new players will receive 50 Ironskin Potions and 1 Aglet.</div><br></details> | false |
+| STARTINGINVENTORY | If true, adds some items to the Inventory for new players when SSC is enabled.<br>[***Click here 👆 for more information.***](#-dynamic-inventory--startinginventory-) | false |
 | WORLD_NAME | Give your World a friendly name. | (Empty) |
 | WORLD_FILE | Specifies a name for the world file. | terraria_world.wld |
 | AUTO_CREATE | Creates the world file with the specified size (1: Small, 2: Medium, 3: Large). | 1 |
@@ -234,6 +234,40 @@ You can configure the server behavior using the variables below in your compose.
 
 > [!CAUTION]
 > Don't forget to adjust the options to suit your specific situation.
+
+<br>
+
+---
+## 🎒 Dynamic Inventory ( STARTINGINVENTORY )
+The Dynamic Inventory system allows you to define which items new players will receive when they first join the server, without needing to edit files manually.
+The script processes this information atomically on boot using jq.
+
+🔹 **Option 1: Basic Kit (Quick Mode)**  
+&emsp;&ensp;&nbsp;- If you set the variable to `true`, the server automatically injects a default starter kit:  
+&emsp;&emsp;&ensp;(99 Glowsticks, 99 Ironskin Potions, 1 Aglet, 1 Ice Mirror, 1 Gravedigger's Shovel).
+
+```yml
+environment:
+  - STARTINGINVENTORY=true
+```
+
+<br>
+
+🔹 **Option 2: Customized Kit (Advanced Mode)**  
+&emsp;&ensp;&nbsp;- To define specific items, use the compact string format:  
+&emsp;&emsp;&ensp;ID, PREFIX, QUANTITY separated by a colon ( : ).
+
+&emsp;&emsp;&ensp;Syntax: `netID,prefix,stack:netID,prefix,stack:...`
+
+&emsp;&emsp;&ensp;Practical Example:  
+&emsp;&emsp;&ensp;For players to start with a Platinum Axe (netID: 3482), 10 Torches (netID: 8), and 5 Lesser Healing Potion (netID: 28):
+
+```yml
+environment:
+  - STARTINGINVENTORY=3482,0,1:8,0,10:28,0,5
+```
+> [!TIP]
+> You can find the complete list of Terraria item netIDs on the [Official Wiki](https://terraria.wiki.gg/wiki/Item_IDs).
 
 <br>
 
