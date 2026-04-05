@@ -307,8 +307,10 @@ The following tools were used in the construction of the project:
 
 ---
 ## 📝 License:
+> [!WARNING]
+> This project is licensed under: [GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file).
 
-This project is licensed under: [GPL-3.0 license](https://github.com/Finallf/terraria?tab=GPL-3.0-1-ov-file).
+
 
 > [!NOTE]
 > Highlights information that users should take into account.
