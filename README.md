@@ -98,14 +98,19 @@ services:
     user: 1000:0
     stdin_open: true
     tty: false
+    environment:
+      - SERVER_PASSWORD=yourpassword123
+      - WORLD_NAME=My World Terraria
     volumes:
+      # Map these folders to persist your data on the host.
       - ./terraria/config:/tshock/config
       - ./terraria/logs:/tshock/logs
       - ./terraria/crashes:/tshock/crashes
       - ./terraria/plugins:/tshock/plugins
       - ./terraria/worlds:/tshock/worlds
     ports:
-      - "7777:7777"
+      - "7777:7777" # Game Port
+      - "7878:7878" # REST API Port (Optional)
     restart: unless-stopped
 ```
 These are the minimum required settings.<br>
