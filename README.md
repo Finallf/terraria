@@ -87,9 +87,9 @@ docker run --rm -di --terraria finallf/terraria:latest
 
 <br>
 
-For everyday use, it's best to use docker compose.<br>
+The recommended way to run your server is using Docker Compose.  
 
-1. Create a compose.yml file similar to this:
+1. Create a compose.yml file and adapt the volume paths to your environment, similar to this:  
 ```yml
 services:
   terraria:
@@ -114,17 +114,25 @@ services:
     restart: unless-stopped
 ```
 These are the minimum required settings.<br>
-For more refined settings, see the [Environment Variables](#%EF%B8%8F-environment-variables) section for more information.
-
+For more refined settings, see the [Environment Variables](#%EF%B8%8F-environment-variables) section for more information.  
 <br>
 
-2. To begin, run the following command in the terminal, in the directory containing the compose.yml file:
+2. Make sure that the folders on the host have the correct permissions for the UID configured in compose.yml.  
+
+3. To begin, run the following command in the terminal, in the directory containing the compose.yml file:
 ```bash
 docker compose up -d
 ```
-Once your Docker container is running, open your Terraria client and connect using the host's IP address and the default port 7777.
+Once your Docker container is running, open your Terraria client and connect using the host's IP address and the default port 7777. 
 
-If this is the first time running the container, it may take a while due to world creation.
+If this is the first time running the container, it may take a while due to world creation. 
+
+<br>
+
+4. You can also monitor the startup:  
+```bash
+tail -f ./tshock/logs/container_init.log
+```
 
 <br>
 
