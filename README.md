@@ -285,6 +285,58 @@ environment:
 <br>
 
 ---
+## 💾 Persistence Structure (Volumes)  
+To ensure your server maintains its progress after reboots or image updates, it's necessary to map the 5 main volumes. Below, we detail the content and purpose of each:  
+
+<br>
+
+1. 📁 `/tshock/config`  
+	- **Contents:** JSON configuration files ( `config.json`, `sscconfig.json`, `permissions.json` ).  
+	- **Purpose:** This is the "brain" of the server rules. This volume is where our boot script performs dynamic changes. Note: The `sscconfig.json` file resides here and is where the initial inventory is managed.  
+
+<br>
+
+2. 📁 `/tshock/logs`  
+	- **Contents:** The `container_init.log` file and native TShock logs.  
+	- **Purpose:** Auditing and diagnostics. This volume allows you to monitor what happened during boot ( such as the injection of items by `jq` ) and view server errors without needing to access the Docker console.
+
+<br>
+
+3. 📁 `/tshock/crashes` (optional - legacy)  
+	- **Contents:** Memory dump files (crash dumps) from an unexpected crash.  
+	- **Purpose:** This is only necessary if you are a TShock plugin developer or are debugging deep crashes (segfaults/memory crashes) and need to organize the `.dmp` files into a specific network folder or volume.
+
+<br>
+
+4. 📁 `/tshock/plugins`  
+	- **Contents:** Additional plugins and extensions for TShock.  
+	- **Purpose:** Customization. By mapping this volume, you can add new features to the server (such as saving systems or area protection) simply by copying the files to the folder on your host, without needing to rebuild the Docker image.  
+
+<br>
+
+5. 📁 `/tshock/worlds`  
+	- **Contents:** Map files ( `.wld` ) and automatic backup folders.  
+	- **Purpose:** Stores the "body" of your server. This is where all construction, mining, and terrain modifications are saved. Without this volume, the world will be reset on every reboot.  
+
+<br>
+
+> [!TIP]
+> Host Organization
+> 
+> When configuring your server, we recommend creating a folder structure that mirrors the volumes to facilitate backups:
+>
+> ```Plaintext
+> /path/on/host/terraria/
+> ├── config/
+> ├── logs/
+> ├── crashes/
+> ├── plugins/
+> └── worlds/
+> ```
+
+<br>
+
+---
 ## 🔐 Security and Permissions (Rootless Architecture)
 To ensure the highest level of security, this image was built following the **Rootless** standard. This means that the TShock server and all internal scripts **do not run as administrator (root)** within the container.  
 
