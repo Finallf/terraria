@@ -145,26 +145,27 @@ You can configure the server behavior using the variables below in your compose.
 
 |  ***Variable*** | ***Description*** | ***Default*** |
 |:---------|:-----------:|:-------:|
-| SERVER_PASSWORD | The server password required to join the server. | false |
-| MAX_SLOTS | Maximum number of clients connected at once. | 8 |
-| REST_API_ENABLED | If true, activate the REST API. | false |
-| LOG_REST | If true, enables logging of REST API connections. | false |
-| DISABLE_UUID_LOGIN | If true, prevents users from logging in with the client's UUID. | false |
-| SSC_ENABLED | If true, enables server-side character, causing client data to be saved on the server instead of the client. | false |
-| SSC_SAVE | How often SSC should save, in minutes. | 5 |
-| KEEP_PLAYER_APPEARANCE | If true, it allows players to retain the local appearance of their characters in SSC. | false |
-| STARTINGINVENTORY | If true, adds some items to the Inventory for new players when SSC is enabled.<br>[***Click here 👆 for more information.***](#-dynamic-inventory--startinginventory-) | false |
+| LOG_INIT | If `true`, enable container logging, saving everything to the `container_init.log` file. | `false` |
+| SERVER_PASSWORD | The server password required to join the server. | `false` |
+| MAX_SLOTS | Maximum number of clients connected at once. | `8` |
+| REST_API_ENABLED | If `true`, activate the REST API. | `false` |
+| LOG_REST | If `true`, enables logging of REST API connections. | `false` |
+| DISABLE_UUID_LOGIN | If `true`, prevents users from logging in with the client's UUID. | `false` |
+| SSC_ENABLED | If `true`, enables server-side character, causing client data to be saved on the server instead of the client. | `false` |
+| SSC_SAVE | How often SSC should save, in minutes. | `5` |
+| KEEP_PLAYER_APPEARANCE | If `true`, it allows players to retain the local appearance of their characters in SSC. | `false` |
+| STARTINGINVENTORY | If `true`, adds some items to the Inventory for new players when SSC is enabled.<br>[***Click here 👆 for more information.***](#-dynamic-inventory--startinginventory-) | false |
 | WORLD_NAME | Give your World a friendly name. | (Empty) |
-| WORLD_FILE | Specifies a name for the world file. | terraria_world.wld |
-| AUTO_CREATE | Creates the world file with the specified size (1: Small, 2: Medium, 3: Large). | 1 |
-| DIFFICULTY | Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey). This only affects new worlds. | 0 |
-| WORLD_EVIL | Sets the world's evil state (-1: random, 0: corrupt, 1: crimson). | random |
-| SEED | Specifies the world seed when using -autocreate. | random |
-| FORCE_UPDATE | If true, prevents the server from entering hibernation mode when there are no players. | false |
+| WORLD_FILE | Specifies a name for the world file. | `terraria_world.wld` |
+| AUTO_CREATE | Creates the world file with the specified size (`1`: Small, `2`: Medium, `3`: Large). | `1` |
+| DIFFICULTY | Sets the world's difficulty (`0`: normal, `1`: expert, `2`: master, `3`: journey). This only affects new worlds. | `0` |
+| WORLD_EVIL | Sets the world's evil state (`-1`: random, `0`: corrupt, `1`: crimson). | `-1` |
+| SEED | Specifies the world seed when using -autocreate. | `random` |
+| FORCE_UPDATE | If `true`, prevents the server from entering hibernation mode when there are no players. | `false` |
 | MOTD | Sets the Message of the Day. | (Empty) |
-| SECURE | If true, activates the base game's "antispam" feature. | false |
-| LANG | Sets the server language (en-US, de-DE, it-IT, fr-FR, es-ES, ru-RU, zh-Hans, pt-BR, pl-PL). | (Empty) |
-| TZ | Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones | UTC |
+| SECURE | If `true`, activates the base game's "antispam" feature. | `false` |
+| LANG | Sets the server language (`en-US`, `de-DE`, `it-IT`, `fr-FR`, `es-ES`, `ru-RU`, `zh-Hans`, `pt-BR`, `pl-PL`). | (Empty) |
+| TZ | Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones | `UTC` |
 
 > [!TIP]
 > <details>
@@ -185,27 +186,7 @@ You can configure the server behavior using the variables below in your compose.
 >     stdin_open: true
 >     tty: false
 >     environment:
->       # World Variables:
->         # - SERVER_PASSWORD - The server password required to join the server.
->         # - MAX_SLOTS - Maximum number of clients connected at once.
->         # - REST_API_ENABLED - Enable or disable the REST API.
->         # - LOG_REST - Whether or not to log REST API connections.
->         # - DISABLE_UUID_LOGIN - Prevents users from being able to login with their client UUID.
->         # - SSC_ENABLED - Enable server side characters, causing client data to be saved on the server instead of the client.
->         # - SSC_SAVE - How often SSC should save, in minutes.
->         # - KEEP_PLAYER_APPEARANCE - If players should keep their local character appearance in SSC.
->         # - STARTINGINVENTORY - The starting default inventory for new players when SSC is enabled. Readme.md for more info.
->         # - WORLD_NAME - Give your World a friendly name.
->         # - WORLD_FILE - Specifies a name for the world file.
->         # - AUTO_CREATE - 1: Small, 2: Medium, 3: Large - create the world file with a given size.
->         # - DIFFICULTY - Sets the world's difficulty (0: normal, 1: expert, 2: master, 3: journey).
->         # - WORLD_EVIL - Sets the world's evil state (random, corrupt, or crimson).
->         # - SEED - Specifies the world seed when using -autocreate.
->         # - FORCE_UPDATE - Forces the server not to hibernate when there are no players.
->         # - MOTD - Sets the Message of the Day.
->         # - SECURE - Turns on the base game's "antispam" feature.
->         # - LANG - Sets the server language (en-US, de-DE, it-IT, fr-FR, es-ES, ru-RU, zh-Hans, pt-BR, pl-PL).
->         # - TZ - Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+>       - LOG_INIT=true
 >       - SERVER_PASSWORD=123456
 >       - MAX_SLOTS=16
 >       - REST_API_ENABLED=true
