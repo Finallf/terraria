@@ -424,7 +424,8 @@ If this project has helped you in any way, consider buying me a coffee! Your don
 
 | 🌎 GitHub Sponsors | 🇧🇷 (Pix) |
 |:---:|:---:|
-| If you are outside Brazil, you can support me through GitHub Sponsors.<br><a href="https://github.com/sponsors/finallf"><img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github-sponsors"></a> | Escaneie o QR Code.<br><img src="./assets/qrcode-pix.png" width="200px" alt="Pix QR Code"> |
+| You can support me through<br>GitHub Sponsors.<br><p></p><a href="https://github.com/sponsors/finallf"><img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github-sponsors"></a> | Escaneie o QR Code.<br><img src="./assets/qrcode-pix.png" width="200px" alt="Pix QR Code"> |
+
 OU utilize a Chave Pix (Copia e Cola):
 
 ```
