@@ -425,7 +425,7 @@ If this project has helped you in any way, consider buying me a coffee! Your don
 <table>
 	<tbody>
 		<tr>
-            <td>
+            <td align="center" style="display: inline-grid !important;">
 				🌎 GitHub Sponsors
 				<br>
 				If you are outside Brazil, you can support me through GitHub Sponsors.
@@ -433,7 +433,7 @@ If this project has helped you in any way, consider buying me a coffee! Your don
 					<img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github-sponsors">
 				</a>
             </td>
-            <td>
+            <td align="center" style=" display: inline-grid !important;">
 				🇧🇷 (Pix)
 				<br>
 				Escaneie o QR Code.
