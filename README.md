@@ -422,35 +422,14 @@ If this project has helped you in any way, consider buying me a coffee! Your don
 🇧🇷 Se este projeto te ajudou de alguma forma, considere me pagar um café! Sua doação ajuda a manter as atualizações e a documentação.
 
 
-<table>
-	<tbody>
-		<tr>
-            <td>
-				🌎 GitHub Sponsors
-				<br>
-				If you are outside Brazil, you can support me through GitHub Sponsors.
-				<a href="https://github.com/sponsors/finallf">
-					<img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github-sponsors">
-				</a>
-            </td>
-            <td style="display: inline-grid;">
-				🇧🇷 (Pix)
-				<br>
-				Escaneie o QR Code.
-				<br>
-				<img src="./assets/qrcode-pix.png" width="200px" alt="Pix QR Code">
-				<br>
-				OU utilize a Chave Pix (Copia e Cola):
-				<br>
-				
+| 🌎 GitHub Sponsors | 🇧🇷 (Pix) |
+|:---:|:---:|
+| If you are outside Brazil, you can support me through GitHub Sponsors.<br><a href="https://github.com/sponsors/finallf"><img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github-sponsors"></a> | Escaneie o QR Code.<br><img src="./assets/qrcode-pix.png" width="200px" alt="Pix QR Code"> |
+OU utilize a Chave Pix (Copia e Cola):
+
 ```
 00020126860014br.gov.bcb.pix013625d1d528-df10-4005-bb28-2acf897062430224Obrigado pelo seu apoio 27600016BR.COM.PAGSEGURO013603C1C455-75F6-435F-ABB4-6709E09D60115204899953039865802BR5920REGIS VIEIRA DELGADO6011Santo Andre62290525PAGS00000000026040707337763043C2C
 ```
-<br>
-			</td>
-		</tr>
-	<tbody>
-</table>
 
 
 
