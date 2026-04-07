@@ -153,7 +153,7 @@ You can configure the server behavior using the variables below in your compose.
 | DISABLE_UUID_LOGIN | If `true`, prevents users from logging in with the client's UUID. | `false` |
 | SSC_ENABLED | If `true`, enables server-side character, causing client data to be saved on the server instead of the client. | `false` |
 | SSC_SAVE | How often SSC should save, in minutes. | `5` |
-| KEEP_PLAYER_APPEARANCE | If `true`, it allows players to retain the local appearance of their characters in SSC. | `false` |
+| PLAYER_APPEARANCE | If `true`, it allows players to retain the local appearance of their characters in SSC. | `false` |
 | STARTINGINVENTORY | If `true`, adds some items to the Inventory for new players when SSC is enabled.<br>[***Click here 👆 for more information.***](#-dynamic-inventory--startinginventory-) | `false` |
 | WORLD_NAME | Give your World a friendly name. | (Empty) |
 | WORLD_FILE | Specifies a name for the world file. | `terraria_world.wld` |
@@ -194,7 +194,7 @@ You can configure the server behavior using the variables below in your compose.
 >       - DISABLE_UUID_LOGIN=true
 >       - SSC_ENABLED=true
 >       - SSC_SAVE=1
->       - KEEP_PLAYER_APPEARANCE=true
+>       - PLAYER_APPEARANCE=true
 >       - STARTINGINVENTORY=true
 >       - WORLD_NAME=ReloadeD Server
 >       - WORLD_FILE=my_world.wld
