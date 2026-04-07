@@ -433,7 +433,7 @@ If this project has helped you in any way, consider buying me a coffee! Your don
 					<img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github-sponsors">
 				</a>
             </td>
-            <td>
+            <td style="display: inline-grid;">
 				🇧🇷 (Pix)
 				<br>
 				Escaneie o QR Code.
