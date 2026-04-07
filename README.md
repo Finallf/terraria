@@ -208,7 +208,7 @@ You can configure the server behavior using the variables below in your compose.
 >       - LANG=pt-BR
 >       - TZ=America/Sao_Paulo
 >     volumes:
->       # TShock paths to settings, SQLite database, log files, crash files, plugins, and world files.
+>	    # TShock paths for settings, SQLite database, logs, crashes, plugins, and world files.
 >       - ${SSD}/config:/tshock/config
 >       - ${SSD}/logs:/tshock/logs
 >       - ${SSD}/crashes:/tshock/crashes
