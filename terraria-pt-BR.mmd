@@ -1,0 +1,70 @@
+flowchart TD
+    %% Definição de Cores e Estilos
+    classDef host fill:#1e1e1e,stroke:#3498db,stroke-width:2px,color:#fff
+    classDef docker fill:#0db7ed,stroke:#0374b5,stroke-width:2px,color:#fff
+    classDef logic fill:#2c3e50,stroke:#f1c40f,stroke-width:2px,color:#fff
+    classDef config fill:#27ae60,stroke:#2ecc71,stroke-width:2px,color:#fff
+    classDef process fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff
+    classDef volume fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff
+
+    subgraph Host ["🖥️ Host Físico"]
+        direction LR
+        C_YAML["🐳 compose.yml<br/>(Rede e Variáveis de Ambiente)"]
+        
+        subgraph Volumes ["💾 SSD Host Volumes"]
+            V_CONF["/terraria/config"]:::volume
+            V_LOGS["/terraria/logs"]:::volume
+            V_WORLD["/terraria/worlds"]:::volume
+            V_PLUG["/terraria/plugins"]:::volume
+            V_CRASH["/terraria/crashes"]:::volume
+        end
+    end
+
+    subgraph Container ["📦 Container TShock (Rootless | UID:1000 GID:0)"]
+        direction TB
+
+        Net["🌐 Portas Expostas<br/>TCP 7777 (Jogo) | TCP 7878 (REST API)"]:::docker
+
+        subgraph Boot ["🚀 Inicialização (entrypoint.sh)"]
+            direction TB
+            L1["📝 Inicia 'Caixa Preta'<br/>(Grava STDOUT/STDERR em container_init.log)"]:::logic
+            L2["🛡️ Registra TRAP<br/>(Escuta SIGTERM para Graceful Shutdown)"]:::logic
+            L3["🚰 Verifica/Cria Named Pipe<br/>(/tmp/tshock.pipe)"]:::logic
+        end
+
+        subgraph Inject ["💉 Processamento de Configurações"]
+            direction TB
+            C1["📄 Copia configs. base (.json)<br/>se não existirem no Volume"]:::config
+            C2["✏️ Injeção de Variáveis<br/>(Altera config.json via sed)"]:::config
+            C3["🎒 Injeção de Inventário<br/>(Adiciona STARTINGINVENTORY via jq)"]:::config
+            C4["🌍 Validação de Mapa<br/>(Busca .wld ou define -autocreate)"]:::config
+        end
+
+        subgraph Exec ["⚙️ Execução do Servidor"]
+            direction TB
+            E1["▶️ Inicia TShock.Server<br/>(Em Background &)"]:::process
+            E2["👁️ Monitor do Pipe<br/>(Lê FD 3 e escreve no tshock.pipe)"]:::process
+            E3["⏳ Comando Wait<br/>(Segura PID do processo filho ativo)"]:::process
+        end
+    end
+
+    %% Relações Host <-> Container
+    C_YAML -->|Injeta as Vars| Container
+    V_CONF <-->|Persistência /tshock/config| C1
+    V_LOGS <-->|Persistência /tshock/logs| L1
+    V_WORLD <-->|Persistência /tshock/worlds| C4
+    
+    %% Fluxo de execução no Entrypoint
+    L1 --> L2 --> L3
+    L3 --> C1 --> C2 --> C3 --> C4
+    C4 -->|Monta ARGS finais| E1
+    
+    %% Comunicação de Processos
+    E1 <-->|Servidor Lê Comandos| L3
+    E2 -->|Admin Envia Comandos| L3
+    E1 -->|Captura $child| E3
+    
+    %% Gatilho do Graceful Shutdown
+    L2 -.->|Envia 'exit' ao receber 'docker stop'| E2
+    Net <--->|Lançando Processo| E1
+        

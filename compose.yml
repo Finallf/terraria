@@ -1,0 +1,48 @@
+# SSD=/mnt/ssd/Tools
+networks:
+  terraria:
+    external: false
+    name: terraria
+
+services:
+  terraria:
+    image: finallf/terraria:v3.2
+    container_name: terraria
+    user: 1000:0
+    stdin_open: true
+    tty: false
+    environment:
+      - LOG_INIT=true
+      - SERVER_PASSWORD=123456
+      - MAX_SLOTS=16
+      - REST_API_ENABLED=true
+      - LOG_REST=true
+      - DISABLE_UUID_LOGIN=true
+      - SSC_ENABLED=true
+      - SSC_SAVE=1
+      - PLAYER_APPEARANCE=true
+      - STARTINGINVENTORY=true
+      - WORLD_NAME=ReloadeD Server
+      - WORLD_FILE=reloaded_world.wld
+      - AUTO_CREATE=3
+      - DIFFICULTY=2
+      - WORLD_EVIL=crimson
+      - SEED=fortheworthy
+      - FORCE_UPDATE=true
+      - MOTD=Bem Vindo ao ReloadeD Server!
+      - SECURE=true
+      - LANG=pt-BR
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ${SSD}/terraria/config:/tshock/config
+      - ${SSD}/terraria/crashes:/tshock/crashes
+      - ${SSD}/terraria/logs:/tshock/logs
+      - ${SSD}/terraria/plugins:/tshock/plugins
+      - ${SSD}/terraria/worlds:/tshock/worlds
+    ports:
+      - "7777:7777"
+      - "7878:7878"
+    networks:
+      - terraria
+    stop_grace_period: 30s
+    restart: unless-stopped
