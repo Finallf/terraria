@@ -164,7 +164,7 @@ You can configure the server behavior using the variables below in your compose.
 | FORCE_UPDATE | If `true`, prevents the server from entering hibernation mode when there are no players. | `false` |
 | MOTD | Sets the Message of the Day. | (Empty) |
 | SECURE | If `true`, activates the base game's "antispam" feature. | `false` |
-| LANG | Sets the server language (`en-US`, `de-DE`, `it-IT`, `fr-FR`, `es-ES`, `ru-RU`, `zh-Hans`, `pt-BR`, `pl-PL`). | (Empty) |
+| LANG | Sets the server language (`en-US`, `de-DE`, `it-IT`, `fr-FR`, `es-ES`, `ru-RU`, `zh-Hans`, `pt-BR`, `pl-PL`). | `en-US` |
 | TZ | Set your local time zone. - See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones | `UTC` |
 
 > [!TIP]
