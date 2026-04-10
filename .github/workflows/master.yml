@@ -53,7 +53,11 @@ jobs:
       contents: read
       packages: write # Crucial permission for GitHub Packages
     steps:
-      - uses: actions/checkout@v4
+      # Added "ref: master" to ensure it pulls the already updated README from JOB 1.
+      - name: Checkout latest code
+        uses: actions/checkout@v4
+        with:
+          ref: master
 
       # Log in to Docker Hub (Using your Secrets)
       - name: Login to Docker Hub
@@ -83,3 +87,12 @@ jobs:
             ${{ needs.release.outputs.new_release_published == 'true' && format('finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
             ghcr.io/finallf/terraria:latest
             ${{ needs.release.outputs.new_release_published == 'true' && format('ghcr.io/finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
+
+      # Send the README.md file to Docker Hub.
+      - name: Update Docker Hub Description
+        uses: peter-evans/dockerhub-description@v4
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: finallf/terraria
+          readme-filepath: ./README.md
