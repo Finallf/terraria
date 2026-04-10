@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+# Resolves Node.js version 24 warnings for the entire workflow.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   # JOB 1: Update the Contributors in the README
   contrib-readme-job:
@@ -58,11 +62,12 @@ jobs:
         with:
           context: .
           push: true
+          # Here we manually force 'finallf' to lowercase to avoid errors.
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/terraria:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/terraria:${{ github.sha }}
-            ghcr.io/${{ github.repository_owner }}/terraria:latest
-            ghcr.io/${{ github.repository_owner }}/terraria:${{ github.sha }}
+            finallf/terraria:latest
+            finallf/terraria:${{ github.sha }}
+            ghcr.io/finallf/terraria:latest
+            ghcr.io/finallf/terraria:${{ github.sha }}
 
       # Update the description on Docker Hub.
       - name: Update Docker Hub Description (README)
@@ -70,5 +75,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ${{ secrets.DOCKERHUB_USERNAME }}/terraria
+          repository: finallf/terraria
           readme-filepath: ./README.md
