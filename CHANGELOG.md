@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Finallf/terraria/compare/v1.0.0...v1.1.0) (2026-04-10)
+
+
+### Features
+
+* add item removal support to STARTINGINVENTORY ([ebe9a93](https://github.com/Finallf/terraria/commit/ebe9a93ab1a44f01b24b000b9df6207074097889))
+
 # Changelog
 
 All notable changes to the Terraria Server Docker project will be documented in this file.  
