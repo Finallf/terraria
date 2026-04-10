@@ -91,13 +91,31 @@ if [[ -n "$STARTINGINVENTORY" ]]; then
     if [[ "$STARTINGINVENTORY" == "true" ]]; then
         echo "[INFO] STARTINGINVENTORY is 'true'. Applying default items..."
         STARTINGINVENTORY="282,0,99,false:292,0,99,false:285,0,1,false:3199,0,1,false:4711,0,1,false"
+
+    # Checks if the instruction is a removal instruction (Ex: remove:3199)
+    elif [[ "$STARTINGINVENTORY" =~ ^remove:[0-9]+$ ]]; then
+        REMOVE_ID="${STARTINGINVENTORY#remove:}"
+        echo "[INFO] Removal request detected for Item ID: $REMOVE_ID."
+
+        # Remove the item directly from the JSON using the jq select.
+        if jq --arg id "$REMOVE_ID" '.Settings.StartingInventory |= map(select(.netID != ($id | tonumber)))' "$CONFIGPATH/sscconfig.json" > "$CONFIGPATH/sscconfig.tmp"; then
+            mv "$CONFIGPATH/sscconfig.tmp" "$CONFIGPATH/sscconfig.json"
+            echo "[INFO] Item $REMOVE_ID successfully removed from starting inventory."
+        else
+            echo "[ERROR] Failed to remove item via jq."
+        fi
+        # Clear the variable to prevent it from being processed in the ADDITION operation below.
+        STARTINGINVENTORY=""
+
     # Regex: It requires 4 parameters separated by commas and mandates that the last one be either true or false.
     elif [[ "$STARTINGINVENTORY" =~ ^([-0-9]+,[0-9]+,[0-9]+,(true|false))(:[-0-9]+,[0-9]+,[0-9]+,(true|false))*$ ]]; then
         echo "[INFO] Custom STARTINGINVENTORY detected. Validating list..."
     else
-        echo "[WARNING] Environment STARTINGINVENTORY wrongly defined. Format must be ID,Prefix,Stack,Favorited (e.g., 282,0,99,true). Ignoring..."
+        echo -e "[WARNING] Environment STARTINGINVENTORY wrongly defined.\n[WARNING] Format: 'true', 'remove:ID' or 'ID,Prefix,Stack,Favorited'.\n[WARNING] Ignoring..."
         STARTINGINVENTORY=""
     fi
+
+    # ADDITION block (only runs if STARTINGINVENTORY still has content and is not a removal block)
     if [[ -n "$STARTINGINVENTORY" ]]; then
         # jq reads the raw string, splits it along the ':' and ',', and assembles the JSON array perfectly.
         NEW_ITEMS=$(jq -n -c --arg raw "$STARTINGINVENTORY" '
@@ -111,6 +129,7 @@ if [[ -n "$STARTINGINVENTORY" ]]; then
             }
           ] | unique_by(.netID)
         ')
+
         # The inventory is merged with the new items; the `unique_by` parameter ensures there are no duplicates.
         if jq --argjson newItems "$NEW_ITEMS" '.Settings.StartingInventory = (.Settings.StartingInventory + $newItems | unique_by(.netID))' "$CONFIGPATH/sscconfig.json" > "$CONFIGPATH/sscconfig.tmp"; then
             mv "$CONFIGPATH/sscconfig.tmp" "$CONFIGPATH/sscconfig.json"
