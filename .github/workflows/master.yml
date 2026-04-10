@@ -13,16 +13,11 @@ jobs:
   # JOB 1: Update the Contributors in the README
   contrib-readme-job:
     runs-on: ubuntu-latest
-    name: Automate contrib in readme
     permissions:
       contents: write
-      pull-requests: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
-      - name: Contribute List
-        uses: akhilmhdh/contributors-readme-action@v2.3.11
+      - uses: actions/checkout@v4
+      - uses: akhilmhdh/contributors-readme-action@v2.3.11
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -30,16 +25,35 @@ jobs:
           use_username: true
           collaborators: all
 
-  # JOB 2: Build the image and sync it with Docker Hub + GitHub Packages.
-  docker-sync:
+  # JOB 2: Analyzes Commits and Generates the Release
+  release:
     needs: contrib-readme-job
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    outputs:
+      new_release_published: ${{ steps.semantic.outputs.new_release_published }}
+      new_release_version: ${{ steps.semantic.outputs.new_release_version }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Semantic Release
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # JOB 3: Docker Build and Push (Only runs if there is a new version or push to the master branch)
+  docker-sync:
+    needs: release
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write # Crucial permission for GitHub Packages
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       # Log in to Docker Hub (Using your Secrets)
       - name: Login to Docker Hub
@@ -57,23 +71,15 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       # Build and push to BOTH repositories simultaneously.
-      - name: Build and Push Image
+      - name: Build and Push
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           # Here we manually force 'finallf' to lowercase to avoid errors.
+          # If there's a newer version, use that one. If not, just use the latest version.
           tags: |
             finallf/terraria:latest
-            finallf/terraria:${{ github.sha }}
+            ${{ needs.release.outputs.new_release_published == 'true' && format('finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
             ghcr.io/finallf/terraria:latest
-            ghcr.io/finallf/terraria:${{ github.sha }}
-
-      # Update the description on Docker Hub.
-      - name: Update Docker Hub Description (README)
-        uses: peter-evans/dockerhub-description@v4
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: finallf/terraria
-          readme-filepath: ./README.md
+            ${{ needs.release.outputs.new_release_published == 'true' && format('ghcr.io/finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
