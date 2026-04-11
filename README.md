@@ -473,27 +473,27 @@ The following tools were used in the construction of the project:
 
 <div align="center">
     <!-- readme: collaborators,contributors -start -->
-<table>
-	<tbody>
-		<tr>
-            <td align="center">
-                <a href="https://github.com/Finallf">
-                    <img src="https://avatars.githubusercontent.com/u/8967685?v=4" width="80;" alt="Finallf"/>
-                    <br />
-                    <sub><b>Finallf</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/semantic-release-bot">
-                    <img src="https://avatars.githubusercontent.com/u/32174276?v=4" width="80;" alt="semantic-release-bot"/>
-                    <br />
-                    <sub><b>semantic-release-bot</b></sub>
-                </a>
-            </td>
-		</tr>
-	<tbody>
-</table>
-<!-- readme: collaborators,contributors -end -->
+    <table>
+        <tbody>
+            <tr>
+                <td align="center">
+                    <a href="https://github.com/Finallf">
+                        <img src="https://avatars.githubusercontent.com/u/8967685?v=4" width="80;" alt="Finallf"/>
+                        <br />
+                        <sub><b>Finallf</b></sub>
+                    </a>
+                </td>
+                <td align="center">
+                    <a href="https://github.com/semantic-release-bot">
+                        <img src="https://avatars.githubusercontent.com/u/32174276?v=4" width="80;" alt="semantic-release-bot"/>
+                        <br />
+                        <sub><b>semantic-release-bot</b></sub>
+                    </a>
+                </td>
+            </tr>
+        <tbody>
+    </table>
+    <!-- readme: collaborators,contributors -end -->
 </div>
 
 <br>
@@ -504,9 +504,7 @@ The following tools were used in the construction of the project:
     <table>
         <tr>
             <td align="center">
-                <a href="https://reloaded.com.br">
-                  <kbd><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></kbd>
-                </a>
+                <a href="https://reloaded.com.br"><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></a>
                 <p></p>
                 <a href="mailto:finallf@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/-finallf@gmail.com-c14438?style=plastic&logo=gmail&logoColor=white"></a>
                 &nbsp;
