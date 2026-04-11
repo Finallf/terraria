@@ -33,7 +33,7 @@ This section records improvements implemented before the migration to the curren
 
 ### [v3.2] - 2026-03-24
 - **Highlight:** Migration to TShock 6.1 for Terraria 1.4.5.6.
-- **Fixed:** [Ex: UID/GID permission issues in the container]
+- **Fixed:** UID/GID permission issues in the container
 - **Security:** Dynamic Configuration (changed to Inject items with JQ).
 - **Added:** Option to enable container logging; the default is now disabled ( `LOG_INIT=true` ).
 - **Added:** All documentation was created in Markdown.
