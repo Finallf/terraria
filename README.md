@@ -473,8 +473,8 @@ The following tools were used in the construction of the project:
 
 <!-- readme: collaborators,contributors -start -->
 <table>
-    <tbody>
-        <tr>
+	<tbody>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Finallf">
                     <img src="https://avatars.githubusercontent.com/u/8967685?v=4" width="80;" alt="Finallf"/>
@@ -489,8 +489,8 @@ The following tools were used in the construction of the project:
                     <sub><b>semantic-release-bot</b></sub>
                 </a>
             </td>
-        </tr>
-    <tbody>
+		</tr>
+	<tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
 
