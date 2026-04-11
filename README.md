@@ -1,6 +1,6 @@
-<div align="center">
-	<a href="https://terraria.org/"><img alt="Terraria Logo" src="https://static.wikia.nocookie.net/terraria_gamepedia/images/a/a4/NewPromoLogo.png"></a>
-</div>
+<p align="center">
+	<a href="https://terraria.org/"><img alt="Terraria Logo" src="https://raw.githubusercontent.com/finallf/terraria/master/assets/terraria-logo.webp"></a>
+</p>
 
 <br>
 
@@ -20,7 +20,7 @@
 
 <br>
 
-<div align="center">
+<p align="center">
   <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Static Badge" src="https://img.shields.io/badge/Docker Hub-finallf/terraria-blue?style=plastic&logo=docker"></a>
   &nbsp;
   <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Docker Image Version" src="https://img.shields.io/docker/v/finallf/terraria?style=plastic"></a>
@@ -28,7 +28,8 @@
   <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Docker Image Size (tag)" src="https://img.shields.io/docker/image-size/finallf/terraria/v3.1?style=plastic"></a>
   &nbsp;
   <a href="https://hub.docker.com/r/finallf/terraria"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/finallf/terraria?style=plastic"></a>
-  <br><p></p>
+  <br>
+  <br>
   <a href="https://github.com/finallf/terraria"><img alt="Static Badge" src="https://img.shields.io/badge/GitHub-finallf/terraria-blue?style=plastic&logo=github"></a>
   &nbsp;
   <a href="https://github.com/finallf/terraria"><img alt="GitHub License" src="https://img.shields.io/github/license/finallf/terraria?style=plastic"></a>
@@ -36,7 +37,7 @@
   <a href="https://github.com/finallf/terraria"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/finallf/terraria?style=plastic"></a>
   &nbsp;
   <a href="https://github.com/finallf/terraria"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/finallf/terraria"></a>
-</div>
+</p>
 
 <br>
 
@@ -427,7 +428,7 @@ If this project has helped you in any way, consider buying me a coffee! Your don
 
 | 🌎 GitHub Sponsors | <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Pix_%28Brazil%29_logo.svg" width="50px" alt="PIX Logo"> | <img src="https://avatars.githubusercontent.com/u/476675?s=48&v=4" width="15px" alt="PayPal Logo"> PayPal |
 |:---:|:---:|:---:|
-| You can support me through<br>GitHub Sponsors.<br><p></p><a href="https://github.com/sponsors/finallf"><img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github-sponsors"></a> | 🇧🇷 Escaneie o QR Code:<br><a href="https://pag.ae/81FaYZrhJ"><img src="./assets/qrcode-pix.png" width="200px" alt="Pix QR Code"></a> | Click or scan the QR code:<br><a href="https://www.paypal.com/donate/?hosted_button_id=9MS3GZX5KGLP2"><img src="./assets/qrcode-paypal.png" width="200px" alt="PayPal QR Code"></a> |
+| You can support me through<br>GitHub Sponsors.<br><p></p><a href="https://github.com/sponsors/finallf"><img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github-sponsors"></a> | 🇧🇷 Escaneie o QR Code:<br><a href="https://pag.ae/81FaYZrhJ"><img src="https://raw.githubusercontent.com/finallf/terraria/master/assets//qrcode-pix.webp" width="200px" alt="Pix QR Code"></a> | Click or scan the QR code:<br><a href="https://www.paypal.com/donate/?hosted_button_id=9MS3GZX5KGLP2"><img src="https://raw.githubusercontent.com/finallf/terraria/master/assets/qrcode-paypal.webp" width="200px" alt="PayPal QR Code"></a> |
 
 🇧🇷 Ou utilize a Chave Pix (Copia e Cola):
 
@@ -471,7 +472,7 @@ The following tools were used in the construction of the project:
 ## 🧑‍💻 Collaborators:
 💜 Thank you to everyone who contributed to the improvement of this project :)
 
-<div align="center">
+<p align="center">
 <!-- readme: collaborators,contributors -start -->
 <table>
 	<tbody>
@@ -494,17 +495,16 @@ The following tools were used in the construction of the project:
 	<tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
-</div>
+</p>
 
 <br>
 
 ---
 ## 🧙‍♂️ Author:
-<div align="center">
-  <table>
-    <tr>
-      <a href="https://reloaded.com.br"><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></a>
-      <p></p>
+<p align="center">
+      <a href="https://reloaded.com.br"><img alt="Finallf" width="100" src="https://avatars.githubusercontent.com/u/8967685"></a>
+      <br>
+      <br>
       <a href="mailto:finallf@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/-finallf@gmail.com-c14438?style=plastic&logo=gmail&logoColor=white"></a>
       &nbsp;
       <a href="https://x.com/ReloadeDtec"><img alt="Twitter" src="https://img.shields.io/badge/@ReloadeDtec-blue?style=plastic&logo=X"></a>
@@ -512,9 +512,7 @@ The following tools were used in the construction of the project:
       <a href="https://forum.reloaded.com.br"><img alt="Static Badge" src="https://img.shields.io/badge/Forum-ReloadeD-blue?style=plastic&logo=phpbb"></a>
       &nbsp;
       <a href="https://discord.gg/HxmqAEkY"><img alt="Static Badge" src="https://img.shields.io/badge/Discord-Finallf-purple?style=plastic&logo=discord"></a>
-    </tr>
-  </table>
-</div>
+</p>
 
 <br>
 
