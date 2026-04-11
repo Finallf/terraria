@@ -472,24 +472,22 @@ The following tools were used in the construction of the project:
 💜 Thank you to everyone who contributed to the improvement of this project :)
 
 <div align="center">
-    <!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -start -->
 <table>
 	<tbody>
 		<tr>
-            <td align="center">
-                <a href="https://github.com/Finallf">
-                    <img src="https://avatars.githubusercontent.com/u/8967685?v=4" width="80;" alt="Finallf"/>
-                    <br />
-                    <sub><b>Finallf</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/semantic-release-bot">
-                    <img src="https://avatars.githubusercontent.com/u/32174276?v=4" width="80;" alt="semantic-release-bot"/>
-                    <br />
-                    <sub><b>semantic-release-bot</b></sub>
-                </a>
-            </td>
+      <td align="center">
+          <a href="https://github.com/Finallf">
+              <img src="https://avatars.githubusercontent.com/u/8967685?v=4" width="80;" alt="Finallf"/><br>
+              <sub><b>Finallf</b></sub>
+          </a>
+      </td>
+      <td align="center">
+          <a href="https://github.com/semantic-release-bot">
+              <img src="https://avatars.githubusercontent.com/u/32174276?v=4" width="80;" alt="semantic-release-bot"/><br>
+              <sub><b>semantic-release-bot</b></sub>
+          </a>
+      </td>
 		</tr>
 	<tbody>
 </table>
@@ -501,21 +499,19 @@ The following tools were used in the construction of the project:
 ---
 ## 🧙‍♂️ Author:
 <div align="center">
-    <table>
-        <tr>
-            <td align="center">
-                <a href="https://reloaded.com.br"><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></a>
-                <p></p>
-                <a href="mailto:finallf@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/-finallf@gmail.com-c14438?style=plastic&logo=gmail&logoColor=white"></a>
-                &nbsp;
-                <a href="https://x.com/ReloadeDtec"><img alt="Twitter" src="https://img.shields.io/badge/@ReloadeDtec-blue?style=plastic&logo=X"></a>
-                &nbsp;
-                <a href="https://forum.reloaded.com.br"><img alt="Static Badge" src="https://img.shields.io/badge/Forum-ReloadeD-blue?style=plastic&logo=phpbb"></a>
-                &nbsp;
-                <a href="https://discord.gg/HxmqAEkY"><img alt="Static Badge" src="https://img.shields.io/badge/Discord-Finallf-purple?style=plastic&logo=discord"></a>
-            </td>
-        </tr>
-    </table>
+  <table>
+    <tr>
+      <a href="https://reloaded.com.br"><img alt="Finallf" width="100;" src="https://avatars.githubusercontent.com/u/8967685"></a>
+      <p></p>
+      <a href="mailto:finallf@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/-finallf@gmail.com-c14438?style=plastic&logo=gmail&logoColor=white"></a>
+      &nbsp;
+      <a href="https://x.com/ReloadeDtec"><img alt="Twitter" src="https://img.shields.io/badge/@ReloadeDtec-blue?style=plastic&logo=X"></a>
+      &nbsp;
+      <a href="https://forum.reloaded.com.br"><img alt="Static Badge" src="https://img.shields.io/badge/Forum-ReloadeD-blue?style=plastic&logo=phpbb"></a>
+      &nbsp;
+      <a href="https://discord.gg/HxmqAEkY"><img alt="Static Badge" src="https://img.shields.io/badge/Discord-Finallf-purple?style=plastic&logo=discord"></a>
+    </tr>
+  </table>
 </div>
 
 <br>
