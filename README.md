@@ -247,6 +247,8 @@ You can configure the server behavior using the variables below in your compose.
 The Dynamic Inventory system allows you to define which items new players will receive when they first join the server, without needing to edit files manually.
 The script processes this information atomically on boot using `jq`.
 
+<br>
+
 🔹 **Option 1: Basic Kit (Quick Mode)**  
 &emsp;&ensp;&nbsp;- If you set the variable to `true`, the server automatically injects a default starter kit:  
 &emsp;&emsp;&ensp;(99 Glowsticks, 99 Ironskin Potions, 1 Aglet, 1 Ice Mirror, 1 Gravedigger's Shovel).  
@@ -259,9 +261,9 @@ environment:
 
 🔹 **Option 2: Customized Kit (Advanced Mode)**  
 &emsp;&ensp;&nbsp;- To define specific items, use the compact string format:  
-&emsp;&emsp;&ensp;ID, PREFIX, QUANTITY separated by a colon ( : ).
+&emsp;&emsp;&ensp;ID, PREFIX, QUANTITY separated by a colon ( : ).  
 
-&emsp;&emsp;&ensp;Syntax: `netID,prefix,stack:netID,prefix,stack:...`
+&emsp;&emsp;&ensp;Syntax: `netID,prefix,stack:netID,prefix,stack:...`  
 
 &emsp;&emsp;&ensp;Practical Example:  
 &emsp;&emsp;&ensp;For players to start with a Platinum Axe (ID: 3482), 10 Torches (ID: 8), and 5 Lesser Healing Potion (ID: 28):  
@@ -269,6 +271,24 @@ environment:
 environment:
   - STARTINGINVENTORY=3482,0,1:8,0,10:28,0,5
 ```
+
+<br>
+
+🔹 **Option 3: Removing an item**  
+&emsp;&ensp;&nbsp;- You can also remove any item from the list:  
+&emsp;&emsp;&ensp;Using 'remove:ID'  
+
+&emsp;&emsp;&ensp;Syntax: `remove:netID`  
+
+&emsp;&emsp;&ensp;Practical Example:  
+&emsp;&emsp;&ensp;We will remove the Platinum Axe (ID: 3482)
+```yml
+environment:
+  - STARTINGINVENTORY=remove:3482
+```
+
+<br>
+
 > [!TIP]
 > You can find the complete list of Terraria item netIDs on the <a href="https://terraria.wiki.gg/wiki/Item_IDs">Official Wiki</a>.
 
