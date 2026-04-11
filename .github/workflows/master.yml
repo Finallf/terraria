@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - beta
 
 # Resolves Node.js version 24 warnings for the entire workflow.
 env:
@@ -51,7 +52,7 @@ jobs:
   # JOB 3: Docker Build and Push (Only runs if there is a new version or push to the master branch)
   docker-sync:
     needs: release
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/beta'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -89,9 +90,9 @@ jobs:
           # Here we manually force 'finallf' to lowercase to avoid errors.
           # If there's a newer version, use that one. If not, just use the latest version.
           tags: |
-            finallf/terraria:latest
+            finallf/terraria:${{ github.ref == 'refs/heads/master' && 'latest' || 'beta' }}
             ${{ needs.release.outputs.new_release_published == 'true' && format('finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
-            ghcr.io/finallf/terraria:latest
+            ghcr.io/finallf/terraria:${{ github.ref == 'refs/heads/master' && 'latest' || 'beta' }}
             ${{ needs.release.outputs.new_release_published == 'true' && format('ghcr.io/finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
 
       # Send the README.md file to Docker Hub.
