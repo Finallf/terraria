@@ -1,16 +1,16 @@
-# [1.1.0](https://github.com/Finallf/terraria/compare/v1.0.0...v1.1.0) (2026-04-10)
-
-
-### Features
-
-* add item removal support to STARTINGINVENTORY ([ebe9a93](https://github.com/Finallf/terraria/commit/ebe9a93ab1a44f01b24b000b9df6207074097889))
-
 # Changelog
 
 All notable changes to the Terraria Server Docker project will be documented in this file.  
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).  
 
 ---
+# Auto-Changelog:
+
+# [1.1.0](https://github.com/Finallf/terraria/compare/v1.0.0...v1.1.0) (2026-04-10)
+
+### Features
+* add item removal support to STARTINGINVENTORY ([ebe9a93](https://github.com/Finallf/terraria/commit/ebe9a93ab1a44f01b24b000b9df6207074097889))
+
 
 ## [1.0.0] - 2026-04-10
 ### Added
@@ -22,7 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
-## 📜 Legacy History (Pre-Automation)
+# 📜 Legacy History (Pre-Automation)
 
 This section records improvements implemented before the migration to the current CI/CD system.
 
