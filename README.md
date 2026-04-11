@@ -16,7 +16,7 @@
 
 ---
 ## 🖥️ About the project
-### This is a high-performance <a href="https://www.docker.com"><img alt="Docker Logo" style="width: 9%" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Docker_Logo.png"></a> image for Terraria <a href="https://github.com/Pryaxis/TShock"><img alt="TShock Logo" style="width: 7%" src="https://tshock.s3.us-west-001.backblazeb2.com/newlogo.png"></a> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
+### This is a high-performance <a href="https://www.docker.com"><img alt="Docker Logo" width="60" src="https://raw.githubusercontent.com/finallf/terraria/master/assets/docker-logo.webp"></a> image for Terraria <a href="https://github.com/Pryaxis/TShock"><img alt="TShock Logo" width="60" src="https://raw.githubusercontent.com/finallf/terraria/master/assets/tshock-logo.webp"></a> servers. Designed with a focus on automation, data security, detailed monitoring, and is completely rootless.
 
 <br>
 
