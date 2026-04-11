@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: akhilmhdh/contributors-readme-action@v2.3.11
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         with:
           image_size: 80
           use_username: true
@@ -42,7 +42,7 @@ jobs:
         id: semantic
         uses: cycjimmy/semantic-release-action@v4
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
   # JOB 3: Docker Build and Push (Only runs if there is a new version or push to the master branch)
   docker-sync:
