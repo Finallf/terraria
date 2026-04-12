@@ -7,6 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 <br>
 
 
+# [1.2.0-beta.4](https://github.com/Finallf/terraria/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2026-04-12)
+
+
+### Bug Fixes
+
+* Testing changes in compose.yml ([b76da3d](https://github.com/Finallf/terraria/commit/b76da3dd20d79bf1598a55dc889ef3f83ed46fa0))
+
 # [1.2.0-beta.3](https://github.com/Finallf/terraria/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2026-04-12)
 
 
