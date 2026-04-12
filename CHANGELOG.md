@@ -1,3 +1,13 @@
+---
+# Auto-Changelog:
+
+# [1.2.0-beta.1](https://github.com/Finallf/terraria/compare/v1.1.0...v1.2.0-beta.1) (2026-04-12)
+
+
+### Features
+
+* add AUTO_SAVE environment variable control ([9939c31](https://github.com/Finallf/terraria/commit/9939c31500c0bb64bc7552342eff0858cc232688))
+
 # Changelog
 
 All notable changes to the Terraria Server Docker project will be documented in this file.  
