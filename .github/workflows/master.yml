@@ -16,11 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: write
-      pull-requests: write
-      packages: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
       - uses: akhilmhdh/contributors-readme-action@v2.3.11
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
@@ -35,14 +34,14 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: write
-      pull-requests: write
-      packages: write
     outputs:
       new_release_published: ${{ steps.semantic.outputs.new_release_published }}
       new_release_version: ${{ steps.semantic.outputs.new_release_version }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}
       - name: Semantic Release
         id: semantic
         uses: cycjimmy/semantic-release-action@v4
@@ -51,20 +50,17 @@ jobs:
 
   # JOB 3: Docker Build and Push (Only runs if there is a new version or push to the master branch)
   docker-sync:
-    needs: release
+    needs: [contrib-readme-job, release]
     if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/beta'
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      issues: write
-      pull-requests: write
+      contents: read
       packages: write # Crucial permission for GitHub Packages
     steps:
-      # Added "ref: master" to ensure it pulls the already updated README from JOB 1.
-      - name: Checkout latest code
+      - name: Checkout current code
         uses: actions/checkout@v4
         with:
-          ref: master
+          token: ${{ secrets.GH_PAT }}
 
       # Log in to Docker Hub (Using your Secrets)
       - name: Login to Docker Hub
@@ -73,13 +69,13 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # Log in to GitHub Container Registry (Automatic, no manual secret required)
-      - name: Login to GitHub Container Registry
+      # Log in to GitHub Container Registry
+      - name: Login to GHCR
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GH_PAT }}
 
       # Build and push to BOTH repositories simultaneously.
       - name: Build and Push
@@ -90,9 +86,9 @@ jobs:
           # Here we manually force 'finallf' to lowercase to avoid errors.
           # If there's a newer version, use that one. If not, just use the latest version.
           tags: |
-            finallf/terraria:${{ github.ref == 'refs/heads/master' && 'latest' || 'beta' }}
+            finallf/terraria:${{ github.ref_name }}
             ${{ needs.release.outputs.new_release_published == 'true' && format('finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
-            ghcr.io/finallf/terraria:${{ github.ref == 'refs/heads/master' && 'latest' || 'beta' }}
+            ghcr.io/finallf/terraria:${{ github.ref_name }}
             ${{ needs.release.outputs.new_release_published == 'true' && format('ghcr.io/finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
 
       # Send the README.md file to Docker Hub.
