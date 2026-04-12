@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ---
 <br>
 
+
+# [1.2.0-beta.2](https://github.com/Finallf/terraria/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2026-04-12)
+
+
+### Bug Fixes
+
+* Error with .releaserc when writing to the changelog. ([513c3e4](https://github.com/Finallf/terraria/commit/513c3e4dfa9aae74bd9412cbf61873a483536e8a))
+
 # [1.2.0-beta.1](https://github.com/Finallf/terraria/compare/v1.1.0...v1.2.0-beta.1) (2026-04-12)
 
 ### Features
