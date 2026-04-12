@@ -7,6 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 <br>
 
 
+# [1.2.0-beta.5](https://github.com/Finallf/terraria/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2026-04-12)
+
+
+### Bug Fixes
+
+* repair checkout logic in docker-sync job ([bfebeb1](https://github.com/Finallf/terraria/commit/bfebeb1d9934d9427fa8892a769bdad5a1c5e971))
+
 # [1.2.0-beta.4](https://github.com/Finallf/terraria/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2026-04-12)
 
 
