@@ -18,6 +18,7 @@ services:
       - REST_API_ENABLED=true
       - LOG_REST=true
       - DISABLE_UUID_LOGIN=true
+      - AUTO_SAVE=true
       - SSC_ENABLED=true
       - SSC_SAVE=1
       - PLAYER_APPEARANCE=true

@@ -160,6 +160,7 @@ You can configure the server behavior using the variables below in your compose.
 | REST_API_ENABLED | If `true`, activate the REST API. | `false` |
 | LOG_REST | If `true`, enables logging of REST API connections. | `false` |
 | DISABLE_UUID_LOGIN | If `true`, prevents users from logging in with the client's UUID. | `false` |
+| AUTO_SAVE | Enable or disable Terraria's built-in world auto save. | `true` |
 | SSC_ENABLED | If `true`, enables server-side character, causing client data to be saved on the server instead of the client. | `false` |
 | SSC_SAVE | How often SSC should save, in minutes. | `5` |
 | PLAYER_APPEARANCE | If `true`, it allows players to retain the local appearance of their characters in SSC. | `false` |

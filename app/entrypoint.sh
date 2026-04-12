@@ -53,23 +53,33 @@ fi
 # Parameters config.json:
 if [[ ${SERVER_PASSWORD+x} ]]; then
     echo "[INFO] Setting a Server Password to: (hidden for security)"
-    jq --arg val "$SERVER_PASSWORD" '.Settings.ServerPassword = $val' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" && mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
+    jq --arg val "$SERVER_PASSWORD" '.Settings.ServerPassword = $val' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" \
+&&  mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
 fi
 if [[ ${MAX_SLOTS+x} && "$MAX_SLOTS" =~ ^[0-9]+$ ]]; then
     echo "[INFO] Changing Max Players to: $MAX_SLOTS"
-    jq --arg val "$MAX_SLOTS" '.Settings.MaxSlots = ($val | tonumber)' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" && mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
+    jq --arg val "$MAX_SLOTS" '.Settings.MaxSlots = ($val | tonumber)' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" \
+&&  mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
 fi
 if [[ ${REST_API_ENABLED+x} && "$REST_API_ENABLED" =~ ^(true|false)$ ]]; then
     echo "[INFO] Changing RestApiEnabled to: $REST_API_ENABLED"
-    jq --arg val "$REST_API_ENABLED" '.Settings.RestApiEnabled = ($val == "true")' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" && mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
+    jq --arg val "$REST_API_ENABLED" '.Settings.RestApiEnabled = ($val == "true")' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" \
+&&  mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
 fi
 if [[ ${LOG_REST+x} && "$LOG_REST" =~ ^(true|false)$ ]]; then
     echo "[INFO] Changing LogRest state to: $LOG_REST"
-    jq --arg val "$LOG_REST" '.Settings.LogRest = ($val == "true")' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" && mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
+    jq --arg val "$LOG_REST" '.Settings.LogRest = ($val == "true")' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" \
+&&  mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
 fi
 if [[ ${DISABLE_UUID_LOGIN+x} && "$DISABLE_UUID_LOGIN" =~ ^(true|false)$ ]]; then
     echo "[INFO] Changing DisableUUIDLogin to: $DISABLE_UUID_LOGIN"
-    jq --arg val "$DISABLE_UUID_LOGIN" '.Settings.DisableUUIDLogin = ($val == "true")' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" && mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
+    jq --arg val "$DISABLE_UUID_LOGIN" '.Settings.DisableUUIDLogin = ($val == "true")' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" \
+&&  mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
+fi
+if [[ "$AUTO_SAVE" =~ ^(true|false)$ ]]; then
+    echo "[INFO] Changing AutoSave to: $AUTO_SAVE"
+    jq --arg val "$AUTO_SAVE" '.Settings.AutoSave = ($val == "true")' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" \
+&&  mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
 fi
 
 # Parameters sscconfig.json:
