@@ -76,7 +76,7 @@ if [[ ${DISABLE_UUID_LOGIN+x} && "$DISABLE_UUID_LOGIN" =~ ^(true|false)$ ]]; the
     jq --arg val "$DISABLE_UUID_LOGIN" '.Settings.DisableUUIDLogin = ($val == "true")' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" \
 &&  mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
 fi
-if [[ "$AUTO_SAVE" =~ ^(true|false)$ ]]; then
+if [[ ${AUTO_SAVE+x} && "$AUTO_SAVE" =~ ^(true|false)$ ]]; then
     echo "[INFO] Changing AutoSave to: $AUTO_SAVE"
     jq --arg val "$AUTO_SAVE" '.Settings.AutoSave = ($val == "true")' "$CONFIGPATH/config.json" > "$CONFIGPATH/config.tmp" \
 &&  mv "$CONFIGPATH/config.tmp" "$CONFIGPATH/config.json"
@@ -85,15 +85,18 @@ fi
 # Parameters sscconfig.json:
 if [[ ${SSC_ENABLED+x} && "$SSC_ENABLED" =~ ^(true|false)$ ]]; then
     echo "[INFO] Changing sscconfig.json Enabled to: $SSC_ENABLED"
-    jq --arg val "$SSC_ENABLED" '.Settings.Enabled = ($val == "true")' "$CONFIGPATH/sscconfig.json" > "$CONFIGPATH/sscconfig.tmp" && mv "$CONFIGPATH/sscconfig.tmp" "$CONFIGPATH/sscconfig.json"
+    jq --arg val "$SSC_ENABLED" '.Settings.Enabled = ($val == "true")' "$CONFIGPATH/sscconfig.json" > "$CONFIGPATH/sscconfig.tmp" \
+&&  mv "$CONFIGPATH/sscconfig.tmp" "$CONFIGPATH/sscconfig.json"
 fi
 if [[ ${SSC_SAVE+x} && "$SSC_SAVE" =~ ^[0-9]+$ ]]; then
     echo "[INFO] Changing ServerSideCharacterSave to: $SSC_SAVE"
-    jq --arg val "$SSC_SAVE" '.Settings.ServerSideCharacterSave = ($val | tonumber)' "$CONFIGPATH/sscconfig.json" > "$CONFIGPATH/sscconfig.tmp" && mv "$CONFIGPATH/sscconfig.tmp" "$CONFIGPATH/sscconfig.json"
+    jq --arg val "$SSC_SAVE" '.Settings.ServerSideCharacterSave = ($val | tonumber)' "$CONFIGPATH/sscconfig.json" > "$CONFIGPATH/sscconfig.tmp" \
+&&  mv "$CONFIGPATH/sscconfig.tmp" "$CONFIGPATH/sscconfig.json"
 fi
 if [[ ${PLAYER_APPEARANCE+x} && "$PLAYER_APPEARANCE" =~ ^(true|false)$ ]]; then
     echo "[INFO] Changing KeepPlayerAppearance to: $PLAYER_APPEARANCE"
-    jq --arg val "$PLAYER_APPEARANCE" '.Settings.KeepPlayerAppearance = ($val == "true")' "$CONFIGPATH/sscconfig.json" > "$CONFIGPATH/sscconfig.tmp" && mv "$CONFIGPATH/sscconfig.tmp" "$CONFIGPATH/sscconfig.json"
+    jq --arg val "$PLAYER_APPEARANCE" '.Settings.KeepPlayerAppearance = ($val == "true")' "$CONFIGPATH/sscconfig.json" > "$CONFIGPATH/sscconfig.tmp" \
+&&  mv "$CONFIGPATH/sscconfig.tmp" "$CONFIGPATH/sscconfig.json"
 fi
 
 # Adds items to the Inventory for new players when SSC is enabled.
