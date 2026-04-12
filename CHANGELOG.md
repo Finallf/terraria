@@ -1,26 +1,21 @@
+# Changelog
+
+All notable changes to the Terraria Server Docker project will be documented in this file.<br>
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).<br>
+
 ---
-# Auto-Changelog:
+<br>
 
 # [1.2.0-beta.1](https://github.com/Finallf/terraria/compare/v1.1.0...v1.2.0-beta.1) (2026-04-12)
-
 
 ### Features
 
 * add AUTO_SAVE environment variable control ([9939c31](https://github.com/Finallf/terraria/commit/9939c31500c0bb64bc7552342eff0858cc232688))
 
-# Changelog
-
-All notable changes to the Terraria Server Docker project will be documented in this file.  
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).  
-
----
-# Auto-Changelog:
-
 # [1.1.0](https://github.com/Finallf/terraria/compare/v1.0.0...v1.1.0) (2026-04-10)
 
 ### Features
 * add item removal support to STARTINGINVENTORY ([ebe9a93](https://github.com/Finallf/terraria/commit/ebe9a93ab1a44f01b24b000b9df6207074097889))
-
 
 ## [1.0.0] - 2026-04-10
 ### Added
@@ -29,6 +24,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Automated image push to Docker Hub and GitHub Container Registry (GHCR).
 - Automated contributor list updates in README.
 - Configured `semantic-release` for automated release management.
+
+<br>
 
 ---
 
