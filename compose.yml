@@ -18,7 +18,7 @@ services:
       - REST_API_ENABLED=true
       - LOG_REST=true
       - DISABLE_UUID_LOGIN=true
-      - AUTO_SAVE=true
+      - AUTO_SAVE=false
       - SSC_ENABLED=true
       - SSC_SAVE=1
       - PLAYER_APPEARANCE=true
@@ -30,7 +30,7 @@ services:
       - WORLD_EVIL=crimson
       - SEED=fortheworthy
       - FORCE_UPDATE=true
-      - MOTD=Bem Vindo ao ReloadeD Server!
+      - MOTD=Bem Vindo ao Terraria ReloadeD Server!
       - SECURE=true
       - LANG=pt-BR
       - TZ=America/Sao_Paulo
