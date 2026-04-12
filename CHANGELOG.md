@@ -7,6 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 <br>
 
 
+# [1.2.0-beta.3](https://github.com/Finallf/terraria/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2026-04-12)
+
+
+### Bug Fixes
+
+* Fixed an error where AUTO_SAVE was not being applied. ([191c48f](https://github.com/Finallf/terraria/commit/191c48f84fc82325a54f9cf89eaecda9a39263bb))
+
 # [1.2.0-beta.2](https://github.com/Finallf/terraria/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2026-04-12)
 
 
