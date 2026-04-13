@@ -7,6 +7,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 <br>
 
 
+# [1.2.0](https://github.com/Finallf/terraria/compare/v1.1.0...v1.2.0) (2026-04-13)
+
+
+### Bug Fixes
+
+* Error with .releaserc when writing to the changelog. ([513c3e4](https://github.com/Finallf/terraria/commit/513c3e4dfa9aae74bd9412cbf61873a483536e8a))
+* Fixed an error where AUTO_SAVE was not being applied. ([191c48f](https://github.com/Finallf/terraria/commit/191c48f84fc82325a54f9cf89eaecda9a39263bb))
+* repair checkout logic in docker-sync job ([bfebeb1](https://github.com/Finallf/terraria/commit/bfebeb1d9934d9427fa8892a769bdad5a1c5e971))
+* Testing changes in compose.yml ([b76da3d](https://github.com/Finallf/terraria/commit/b76da3dd20d79bf1598a55dc889ef3f83ed46fa0))
+
+
+### Features
+
+* add AUTO_SAVE environment variable control ([9939c31](https://github.com/Finallf/terraria/commit/9939c31500c0bb64bc7552342eff0858cc232688))
+
 # [1.2.0-beta.5](https://github.com/Finallf/terraria/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2026-04-12)
 
 
