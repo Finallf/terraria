@@ -86,9 +86,9 @@ jobs:
           # Here we manually force 'finallf' to lowercase to avoid errors.
           # If there's a newer version, use that one. If not, just use the latest version.
           tags: |
-            finallf/terraria:${{ github.ref_name }}
+            finallf/terraria:${{ github.ref_name == 'master' && 'latest' || github.ref_name }}
             ${{ needs.release.outputs.new_release_published == 'true' && format('finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
-            ghcr.io/finallf/terraria:${{ github.ref_name }}
+            ghcr.io/finallf/terraria:${{ github.ref_name == 'master' && 'latest' || github.ref_name }}
             ${{ needs.release.outputs.new_release_published == 'true' && format('ghcr.io/finallf/terraria:{0}', needs.release.outputs.new_release_version) || '' }}
 
       # Send the README.md file to Docker Hub.
