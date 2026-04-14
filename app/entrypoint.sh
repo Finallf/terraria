@@ -5,12 +5,12 @@ if [[ "${LOG_INIT:-false}" == "true" ]]; then
     BOOT_LOG="$LOGPATH/container_init.log"
     # Writes to the console and saves to a file.
     exec > >(while read -r line; do echo "[$(date +'%Y-%m-%d %H:%M:%S')] $line"; done | tee -a "$BOOT_LOG") 2>&1
-    echo -e "--- Starting Terraria World Settings ---\n"
+    echo -e "\n--- Starting Terraria World Settings ---\n"
     echo -e "[INFO] File logging is ENABLED.\n[INFO] Saving to $BOOT_LOG"
 else
     # It only writes to the console (STDOUT - visible via 'docker logs').
     exec > >(while read -r line; do echo "[$(date +'%Y-%m-%d %H:%M:%S')] $line"; done) 2>&1
-    echo -e "--- Starting Terraria World Settings ---\n"
+    echo -e "\n--- Starting Terraria World Settings ---\n"
     echo -e "[INFO] File logging is DISABLED.\n[INFO] Set LOG_INIT=true to enable."
 fi
 
@@ -239,10 +239,13 @@ echo -e "[INFO] World Settings for $WORLD_NAME ($WORLD_FILE) is ready."
 echo -e "[INFO] Loading world......\n"
 
 # Run TShock with the pipe:
-exec ./TShock.Server "${ARGS[@]}" < "$PIPE" &
+#exec ./TShock.Server "${ARGS[@]}" < "$PIPE" &
+exec env DOTNET_ROLL_FORWARD=LatestMajor ./TShock.Server "${ARGS[@]}" < "$PIPE" &
 child=$!
 
 echo -e "--- Server launched with PID: $child ---\n" 
 
 # Wait for process:
 wait "$child"
+
+sleep 1

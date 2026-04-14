@@ -1,30 +1,42 @@
 # syntax=docker/dockerfile:1
 
 # STAGE 1: The Builder (Temporary Environment)
-FROM debian:bookworm-slim AS builder
+FROM debian:13-slim AS builder
+
+ARG TSHOCK=https://github.com/Pryaxis/TShock/releases/download/v6.1.0/TShock-6.1.0-for-Terraria-1.4.5.6-linux-x64-Release.zip
+ARG RUNTIME=https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.5/dotnet-runtime-10.0.5-linux-x64.tar.gz
+
+ENV WDIR=/tshock
 
 RUN set -eux \
 &&  apt-get -qq update \
 &&  apt-get -qq install --no-install-recommends \
+    ca-certificates \
     curl \
     unzip \
-    ca-certificates
+&&  mkdir -p $WDIR /dotnet \
+&&  curl -sSL \
+    $TSHOCK -o tshock.zip \
+    $RUNTIME -o runtime.tar.gz \
+&&  unzip -q tshock.zip -d $WDIR \
+&&  tar -xf $WDIR/*.tar -C $WDIR \
+&&  tar -zxf runtime.tar.gz -C /dotnet --no-same-owner \
+&&  rm -rf tshock.zip $WDIR/*.tar runtime.tar.gz
 
-WORKDIR /tshock
+COPY app/ /app/
 
-ARG TSHOCK=https://github.com/Pryaxis/TShock/releases/download/v6.1.0/TShock-6.1.0-for-Terraria-1.4.5.6-linux-x64-Release.zip
-    # Download TShock and extract the files:
-RUN curl -SL $TSHOCK -o tshock.zip \
-    && unzip -q tshock.zip -d /tshock \
-    &&  tar -xf *.tar \
-    &&  rm -rf tshock.zip *.tar
+# Read/write/execute permission for the group (g+rwX), preserved in the COPY of Stage 2.
+RUN set -eux \
+&&  mkdir -p $WDIR/worlds $WDIR/config $WDIR/logs $WDIR/crashes $WDIR/plugins \
+&&  chmod -R g+rwX $WDIR /dotnet /app \
+&&  chmod +x /app/entrypoint.sh $WDIR/TShock.Server
 
-# STAGE 2: Use the official Microsoft image with the .NET 9 Runtime:
-FROM mcr.microsoft.com/dotnet/runtime:9.0-bookworm-slim
+# STAGE 2: Final Image (Debian 13 Trixie Slim)
+FROM debian:13-slim
 
 LABEL Maintainer="Finallf <finallf2@gmail.com>"
 LABEL Homepage="reloaded.com.br"
-LABEL Description="Docker .NET 9 image to run a Terraria server with TShock."
+LABEL Description="Custom Debian 13 image with .NET 10 Runtime for TShock/Terraria."
 
 # Environment Settings:
 ENV WDIR=/tshock \
@@ -36,39 +48,37 @@ ENV WDIR=/tshock \
     CRASHDIR=/tshock/crashes \
     ADDITIONALPLUGINS=/tshock/plugins \
     WORLDPATH=/tshock/worlds \
-    HOME=/tmp
-
-# Copy the configuration files to the container:
-COPY --from=builder --chown=$UID:$GID /tshock $WDIR
-COPY --chown=$UID:$GID app/* /app/
-
-# Define the working directory:
-WORKDIR $WDIR
+    HOME=/tmp \
+    DOTNET_ROOT=/usr/share/dotnet \
+    PATH=$PATH:/usr/share/dotnet \
+    DEBIAN_FRONTEND=noninteractive
 
 # Install the necessary extensions and dependencies:
 RUN set -eux \
 &&  apt-get -qq update \
-&&	apt-get -qq install --no-install-recommends tzdata jq \
-    # Creates folders to ensure permissions on volumes:
-&&  mkdir -p $WORLDPATH $CONFIGPATH $LOGPATH $CRASHDIR $ADDITIONALPLUGINS \
-    # Set the permissions so that files and folders can be accessed and executed by the non-root user:
-&&  chown -R $UID:$GID /app $WDIR \
-&&  chmod -R g+rwX /app $WDIR \
-    # Make the entrypoint.sh script and TShock.Server binary executable:
-&&  chmod +x /app/entrypoint.sh $WDIR/TShock.Server \
+&&  apt-get -qq install --no-install-recommends \
+    ca-certificates \
+    jq \
+    libicu76 \
+    libssl3t64 \
+    tzdata \
+    zlib1g \
+    # Creates the symbolic link for dotnet/runtime:
+&&  ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet \
     # Cleaning the image:
 &&  apt-get -qq clean \
 &&  rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* /tmp/* /var/tmp/*
 
-# Integrity verification:
+# Copy the files, setting the permissions so that they can be accessed and executed by the non-root user:
+COPY --from=builder --chown=$UID:$GID /tshock $WDIR
+COPY --from=builder --chown=$UID:$GID /app /app
+COPY --from=builder /dotnet /usr/share/dotnet
+
+WORKDIR $WDIR
+USER $UID:$GID
+
 HEALTHCHECK --interval=6m --timeout=30s --start-period=3m --retries=3 \
     CMD /bin/bash -c '</dev/tcp/127.0.0.1/7777' || exit 1
 
-# Tell Docker that all future commands should be executed as this user:
-USER $UID:$GID
-
-# Expose the doors:
 EXPOSE 7777 7878
-
-# Check if a Terraria instance already exists:
 ENTRYPOINT ["/app/entrypoint.sh"]
