@@ -45,6 +45,10 @@ jobs:
       - name: Semantic Release
         id: semantic
         uses: cycjimmy/semantic-release-action@v4
+        with:
+          # Adicionamos o plugin necessário para ler o preset 'conventionalcommits'
+          extra_plugins: |
+            conventional-changelog-conventionalcommits
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
