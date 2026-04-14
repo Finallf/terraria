@@ -7,6 +7,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 <br>
 
 
+## [2.0.0-beta.1](https://github.com/Finallf/terraria/compare/v1.2.0...v2.0.0-beta.1) (2026-04-14)
+
+### ⚠ BREAKING CHANGES
+
+* upgrade infrastructure to Debian 13 and .NET 10
+* Created version with debian:13-slim + dotnet runtime 10
+
+### Features
+
+* Created version with debian:13-slim + dotnet runtime 10 ([7991ded](https://github.com/Finallf/terraria/commit/7991ded0dbfaaaf1b2a728c913060b7cc256fbc2))
+* upgrade infrastructure to Debian 13 and .NET 10 ([1b369f8](https://github.com/Finallf/terraria/commit/1b369f8b0abbb769225944f56c578e95f7fd874f))
+
 # [1.2.0](https://github.com/Finallf/terraria/compare/v1.1.0...v1.2.0) (2026-04-13)
 
 
